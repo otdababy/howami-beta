@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:howami/main_test.dart';
+import 'package:howami/mbti_select.dart';
 import 'package:size_config/size_config.dart';
 
 void main() {
@@ -71,74 +72,165 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        body: Scrollbar(
-          thumbVisibility: false,
-          child: SingleChildScrollView(
-            child: Padding(
-              padding: EdgeInsets.fromLTRB(0, 30, 0, 20),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Padding(
-                    padding:  EdgeInsets.all(25.w),
-                    child: Text(
-                      '나는 얼마나???/????',
-                      style: TextStyle(
-                          color: Colors.black,
-                          fontWeight: FontWeight.w900,
-                          fontSize:25.w
-                      ),
-                      maxLines: 2,
-                    ),
+        body: Padding(
+          padding: EdgeInsets.fromLTRB(0, 80.w, 0, 20),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Padding(
+                padding: EdgeInsets.fromLTRB(25.w, 0, 25.w, 10.w),
+                child: Text(
+                  '당신의 MBTI는?',
+                  style: TextStyle(
+                      color: Colors.black,
+                      fontWeight: FontWeight.w900,
+                      fontSize:25.w
                   ),
-                  Padding(
-                    padding: EdgeInsets.fromLTRB(25.w, 0, 0, 0),
-                    child: Text(
-                      '간단한 질문 & 답변으로',
-                      style: TextStyle(
-                          color: Colors.black,
-                          fontWeight: FontWeight.w700,
-                          fontSize:18.w
-                      ),
-                      maxLines: 2,
-                    ),
-                  ),
-                  Padding(
-                    padding: EdgeInsets.fromLTRB(25.w, 0, 0, 0),
-                    child: Text(
-                      '자신에 대해 알아보자',
-                      style: TextStyle(
-                          color: Colors.black,
-                          fontWeight: FontWeight.w700,
-                          fontSize:18.w
-                      ),
-                      maxLines: 2,
-                    ),
-                  ),
-                  Container(
-                    height: 40.w,
-                  ),
-                  Padding(
-                    padding: EdgeInsets.fromLTRB(0.w, 0, 0.w, 0),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      children: [
-                        TestMain(title: 'MBTI 정확도 테스트' ),
-                        TestMain(title: "나는 잘생겼을까/이쁠까?"),
-                      ],
-                    ),
-                  ),
-                ],
+                  maxLines: 2,
+                ),
               ),
-            ),
+              Container(
+                height: 30.w,
+              ),
+              Padding(
+                padding: EdgeInsets.fromLTRB(25.w, 0, 25.w, 10.w),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    mbtiSelect(title: 'ENFP'),
+                    mbtiSelect(title: 'ENFJ'),
+                    mbtiSelect(title: 'ENTJ'),
+                  ],
+                ),
+              ),
+              Padding(
+                padding: EdgeInsets.fromLTRB(25.w, 0, 25.w, 10.w),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    mbtiSelect(title: 'ENTP'),
+                    mbtiSelect(title: 'ESFP'),
+                    mbtiSelect(title: 'ESFJ'),
+                  ],
+                ),
+              ),
+              Padding(
+                padding: EdgeInsets.fromLTRB(25.w, 0, 25.w, 10.w),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    mbtiSelect(title: 'ESTJ'),
+                    mbtiSelect(title: 'ESTP'),
+                    mbtiSelect(title: 'INFP'),
+                  ],
+                ),
+              ),
+              Padding(
+                padding: EdgeInsets.fromLTRB(25.w, 0, 25.w, 10.w),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    mbtiSelect(title: 'INFJ'),
+                    mbtiSelect(title: 'INTP'),
+                    mbtiSelect(title: 'INTJ'),
+                  ],
+                ),
+              ),
+              Padding(
+                padding: EdgeInsets.fromLTRB(25.w, 0, 25.w, 10.w),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    mbtiSelect(title: 'ISFP'),
+                    mbtiSelect(title: 'ISFJ'),
+                    mbtiSelect(title: 'ISTP'),
+                  ],
+                ),
+              ),
+              Padding(
+                padding: EdgeInsets.fromLTRB(25.w, 0, 25.w, 10),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    mbtiSelect(title: 'ISTJ'),
+                  ],
+                ),
+              ),
+            ],
           ),
         ),
-        floatingActionButton: FloatingActionButton(
-          onPressed: _incrementCounter,
-          tooltip: 'Increment',
-          child: const Icon(Icons.add),
-        ), // This trailing comma makes auto-formatting nicer for build methods.
       ),
     );
+    // return SafeArea(
+    //   child: Scaffold(
+    //     body: Scrollbar(
+    //       thumbVisibility: false,
+    //       child: SingleChildScrollView(
+    //         child: Padding(
+    //           padding: EdgeInsets.fromLTRB(0, 30, 0, 20),
+    //           child: Column(
+    //             crossAxisAlignment: CrossAxisAlignment.start,
+    //             children: [
+    //               Padding(
+    //                 padding:  EdgeInsets.all(25.w),
+    //                 child: Text(
+    //                   '나는 얼마나???/????',
+    //                   style: TextStyle(
+    //                       color: Colors.black,
+    //                       fontWeight: FontWeight.w900,
+    //                       fontSize:25.w
+    //                   ),
+    //                   maxLines: 2,
+    //                 ),
+    //               ),
+    //               Padding(
+    //                 padding: EdgeInsets.fromLTRB(25.w, 0, 0, 0),
+    //                 child: Text(
+    //                   '간단한 질문 & 답변으로',
+    //                   style: TextStyle(
+    //                       color: Colors.black,
+    //                       fontWeight: FontWeight.w700,
+    //                       fontSize:18.w
+    //                   ),
+    //                   maxLines: 2,
+    //                 ),
+    //               ),
+    //               Padding(
+    //                 padding: EdgeInsets.fromLTRB(25.w, 0, 0, 0),
+    //                 child: Text(
+    //                   '자신에 대해 알아보자',
+    //                   style: TextStyle(
+    //                       color: Colors.black,
+    //                       fontWeight: FontWeight.w700,
+    //                       fontSize:18.w
+    //                   ),
+    //                   maxLines: 2,
+    //                 ),
+    //               ),
+    //               Container(
+    //                 height: 40.w,
+    //               ),
+    //               Padding(
+    //                 padding: EdgeInsets.fromLTRB(0.w, 0, 0.w, 0),
+    //                 child: Row(
+    //                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+    //                   children: [
+    //                     TestMain(title: 'MBTI 정확도 테스트' ),
+    //                     TestMain(title: "나는 잘생겼을까/이쁠까?"),
+    //                   ],
+    //                 ),
+    //               ),
+    //             ],
+    //           ),
+    //         ),
+    //       ),
+    //     ),
+    //     floatingActionButton: FloatingActionButton(
+    //       onPressed: _incrementCounter,
+    //       tooltip: 'Increment',
+    //       child: const Icon(Icons.add),
+    //     ), // This trailing comma makes auto-formatting nicer for build methods.
+    //   ),
+    // );
   }
 }
