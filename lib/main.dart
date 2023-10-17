@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:howami/main_test.dart';
 import 'package:size_config/size_config.dart';
 
 void main() {
@@ -68,87 +69,76 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Scrollbar(
-        thumbVisibility: true,
-        child: SingleChildScrollView(
-          child: Padding(
-            padding: const EdgeInsets.fromLTRB(0, 20, 0, 10),
-            child: Expanded(
-              child: GridView.builder(
-                  shrinkWrap: true,
-                  physics: BouncingScrollPhysics(),
-                  itemCount: 10,
-                  gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                    crossAxisCount: 2,
-                    childAspectRatio: (0.7),
-                  ),
-                  itemBuilder: (BuildContext ctx, _index){
-                    return GestureDetector(
-                      onTap: ()=>{
-
-                      },
-                      child: Padding(
-                        padding: EdgeInsets.all((20)),
-                        child: Container(
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.start,
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Expanded(
-                                child: Row(
-                                  children: [
-                                    Expanded(
-                                      child: Container(
-
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                              SizedBox(height: (15)),
-                              Padding(
-                                padding: EdgeInsets.only(left: (5)),
-                                child: Column(
-                                  mainAxisAlignment: MainAxisAlignment.start,
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Text(
-                                      '난 얼마나 잘생겼을까?!?!??!',
-                                      style: TextStyle(
-                                          color: Colors.black,
-                                          fontWeight: FontWeight.w700,
-                                          fontSize:12
-                                      ),
-                                      maxLines: 2,
-                                    ),
-                                    Text(
-                                      "이거 클릭",
-                                      style: TextStyle(
-                                        fontWeight: FontWeight.w700,
-                                        color: Colors.black,
-                                        fontSize: 14,
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
+    return SafeArea(
+      child: Scaffold(
+        body: Scrollbar(
+          thumbVisibility: false,
+          child: SingleChildScrollView(
+            child: Padding(
+              padding: EdgeInsets.fromLTRB(0, 30, 0, 20),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Padding(
+                    padding:  EdgeInsets.all(25.w),
+                    child: Text(
+                      '나는 얼마나???/????',
+                      style: TextStyle(
+                          color: Colors.black,
+                          fontWeight: FontWeight.w900,
+                          fontSize:25.w
                       ),
-                    );
-                  }
+                      maxLines: 2,
+                    ),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.fromLTRB(25.w, 0, 0, 0),
+                    child: Text(
+                      '간단한 질문 & 답변으로',
+                      style: TextStyle(
+                          color: Colors.black,
+                          fontWeight: FontWeight.w700,
+                          fontSize:18.w
+                      ),
+                      maxLines: 2,
+                    ),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.fromLTRB(25.w, 0, 0, 0),
+                    child: Text(
+                      '자신에 대해 알아보자',
+                      style: TextStyle(
+                          color: Colors.black,
+                          fontWeight: FontWeight.w700,
+                          fontSize:18.w
+                      ),
+                      maxLines: 2,
+                    ),
+                  ),
+                  Container(
+                    height: 40.w,
+                  ),
+                  Padding(
+                    padding: EdgeInsets.fromLTRB(0.w, 0, 0.w, 0),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        TestMain(title: 'MBTI 정확도 테스트' ),
+                        TestMain(title: "나는 잘생겼을까/이쁠까?"),
+                      ],
+                    ),
+                  ),
+                ],
               ),
             ),
           ),
         ),
+        floatingActionButton: FloatingActionButton(
+          onPressed: _incrementCounter,
+          tooltip: 'Increment',
+          child: const Icon(Icons.add),
+        ), // This trailing comma makes auto-formatting nicer for build methods.
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
 }
