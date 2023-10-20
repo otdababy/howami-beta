@@ -87,7 +87,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       style: TextStyle(
                           color: Colors.black,
                           fontWeight: FontWeight.w900,
-                          fontSize:25.w
+                          fontSize:20.w
                       ),
                       maxLines: 2,
                     ),
@@ -119,15 +119,12 @@ class _MyHomePageState extends State<MyHomePage> {
                   Container(
                     height: 40.w,
                   ),
-                  Padding(
-                    padding: EdgeInsets.fromLTRB(0.w, 0, 0.w, 0),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      children: [
-                        TestMain(title: 'MBTI 정확도 테스트' ),
-                        TestMain(title: "나는 잘생겼을까/이쁠까?"),
-                      ],
-                    ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      TestMain(title: 'MBTI 정확도 테스트' ),
+                      TestMain(title: "나는 잘생겼을까/이쁠까?"),
+                    ],
                   ),
                 ],
               ),

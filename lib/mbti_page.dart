@@ -4,8 +4,8 @@ import 'package:size_config/size_config.dart';
 import 'package:howami/mbti_select.dart';
 
 
-class mbtiPage extends StatelessWidget {
-  const mbtiPage({
+class MbtiPage extends StatelessWidget {
+  const MbtiPage({
     Key? key,
     // required this.press,
   }) : super(key: key);
@@ -40,7 +40,13 @@ class mbtiPage extends StatelessWidget {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                    mbtiSelect(title: 'ENFP'),
+                    // mbtiSelect(title: 'ENFP', press: () { Navigator.pushNamed(context, '/enfp'); }, ),
+                    GestureDetector(
+                        onTap: (){
+                          Navigator.pushNamed(context, '/enfp');
+                        },
+                        child: mbtiSelect(title: 'ENFP')
+                    ),
                     mbtiSelect(title: 'ENFJ'),
                     mbtiSelect(title: 'ENTJ'),
                   ],

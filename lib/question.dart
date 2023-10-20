@@ -1,6 +1,26 @@
 import 'package:flutter/material.dart';
+
+
+// class TestMain extends StatelessWidget {
+//   const TestMain({
+//     Key? key,
+//     required this.title,
+//     // required this.press,
+//   }) : super(key: key);
+//
+//   final String title;
+
+
+
 class Question extends StatelessWidget {
-  const Question({Key? key}) : super(key: key);
+  const Question({
+    Key? key,
+    required this.title,
+
+
+  }) : super(key: key);
+
+  final String title;
 
   @override
   Widget build(BuildContext context) {
@@ -10,7 +30,7 @@ class Question extends StatelessWidget {
           fontFamily: 'SnowCrab',
           fontSize: 18,
         ),
-        child: Text('Q1. 나는 ~ 소리를 들어본적이 있다',textAlign: TextAlign.center,)
+        child: Text(title,textAlign: TextAlign.center,)
     );
   }
 }
