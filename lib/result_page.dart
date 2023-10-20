@@ -5,14 +5,15 @@ import 'package:howami/ratebar.dart';
 import 'package:howami/start_button.dart';
 import 'package:size_config/size_config.dart';
 
-class ResultPage extends StatefulWidget {
-  const ResultPage({Key? key}) : super(key: key);
+class ResultPage extends StatelessWidget {
+  const ResultPage({
+    Key? key,
+    required this.addedResult,
+    // required this.press,`
+  }) : super(key: key);
 
-  @override
-  State<ResultPage> createState() => _ResultPageState();
-}
+  final int addedResult;
 
-class _ResultPageState extends State<ResultPage> {
 
   @override
   Widget build(BuildContext context) {
@@ -59,6 +60,14 @@ class _ResultPageState extends State<ResultPage> {
                 ),
               ),
               Container(height: 25.h,),
+              Text(
+                addedResult.toString(),
+                style: TextStyle(
+                    color: Colors.black,
+                    fontWeight: FontWeight.w700,
+                    fontSize:13.w
+                ),
+              ),
               StartButton(title: '다시하기', press: (){Navigator.pushNamed(context, '/main');})
             ],
           ),

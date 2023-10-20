@@ -38,7 +38,7 @@ class _QuestionState extends State<Question> {
             child: Text(_title,textAlign: TextAlign.center,)
         ),
         Container(height: 10.h),
-        RateBar((val) => setState(()=> _clicked = val)),
+        RateBar((val) => setState(()=> _callback(val))),
         DefaultTextStyle(
             style: TextStyle(
               color: Colors.black,

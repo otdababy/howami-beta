@@ -39,7 +39,7 @@ class MyApp extends StatelessWidget {
             routes: {
               '/mbti': (context) => MbtiPage(),
               '/enfp': (context) => QuestionPage(),
-              '/result': (context) => ResultPage(),
+              // '/result': (context) => ResultPage(),
               '/main' : (context) => MyHomePage()
               // '/first': (context) => Screen1(),
             },
