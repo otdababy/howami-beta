@@ -59,6 +59,44 @@ class ResultPage extends StatelessWidget {
               GestureDetector(
                 onTap: () async {
                   await Clipboard.setData(ClipboardData(text: "https://mbti-37d6b.web.app/#"));
+                  await showDialog(
+                      context: context,
+                      builder: (BuildContext context) {
+                        return AlertDialog(
+                          title: Padding(
+                            padding: EdgeInsets.only(top: (25.0.h)),
+                            child: Center(
+                              child: Text(
+                                '링크가 복사되었습니다!',
+                                textAlign: TextAlign.center,
+                                style: TextStyle(
+                                    color: Colors.black,
+                                    fontFamily: 'SnowCrab',
+                                    fontSize: 20.w,
+                                    fontWeight: FontWeight.w500
+                                ),
+                              ),
+                            ),
+                          ),
+                          actions: [
+                            Container(
+                              width: 60.w,
+                              height: 30.w,
+                              child: TextButton(
+                                  style: TextButton.styleFrom(
+                                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
+                                    backgroundColor: Colors.black,
+                                  ),
+                                  onPressed: () {
+                                    Navigator.of(context).pop();
+                                  },
+                                  child: Text('확인', style: TextStyle(fontFamily: 'SnowCrab',fontWeight: FontWeight.w500, fontSize: (12.w),color: Colors.white),)
+                              ),
+                            )
+                          ],
+                        );
+                      }
+                  );
                   // copied successfully
                 },
                 child: Text(

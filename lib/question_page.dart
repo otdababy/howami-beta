@@ -114,7 +114,7 @@ class _QuestionPageState extends State<QuestionPage> {
                               color: Colors.black,
                               fontFamily: 'SnowCrab',
                               fontSize: 20.w,
-                              fontWeight: FontWeight.w700
+                              fontWeight: FontWeight.w500
                           ),
                         ),
                       ),
