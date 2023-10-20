@@ -3,6 +3,8 @@ import 'package:howami/main_test.dart';
 import 'package:howami/mbti_page.dart';
 import 'package:howami/mbti_select.dart';
 import 'package:howami/question_page.dart';
+import 'package:howami/result_page.dart';
+import 'package:howami/start_button.dart';
 
 import 'package:size_config/size_config.dart';
 
@@ -36,17 +38,19 @@ class MyApp extends StatelessWidget {
           ),
             routes: {
               '/mbti': (context) => MbtiPage(),
-              '/enfp': (context) => QuestionPage()
+              '/enfp': (context) => QuestionPage(),
+              '/result': (context) => ResultPage(),
+              '/main' : (context) => MyHomePage()
               // '/first': (context) => Screen1(),
             },
-          home: const MyHomePage(title: 'Flutter Demo Home Page'));
+          home: const MyHomePage());
          },
     );
   }
 }
 
 class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key, required this.title});
+  const MyHomePage({super.key});
 
   // This widget is the home page of your application. It is stateful, meaning
   // that it has a State object (defined below) that contains fields that affect
@@ -57,7 +61,7 @@ class MyHomePage extends StatefulWidget {
   // used by the build method of the State. Fields in a Widget subclass are
   // always marked "final".
 
-  final String title;
+  // final String title;
 
   @override
   State<MyHomePage> createState() => _MyHomePageState();
@@ -108,25 +112,7 @@ class _MyHomePageState extends State<MyHomePage> {
             Container(
               height: 40.w,
             ),
-            GestureDetector(
-              onTap: (){
-                Navigator.pushNamed(context, '/mbti');
-              },
-              child: TextButton(
-                  onPressed: null,
-                  child: Text(
-                      '시작하기',
-                      style: TextStyle(fontSize: 12.w, fontWeight: FontWeight.w700,
-                          color: Colors.white )
-                  ),
-                  style: TextButton.styleFrom(
-                    fixedSize: Size(130.w,32.w),
-                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20.w)),
-                    backgroundColor: Colors.black,
-                  ),
-
-              ),
-            ),
+            StartButton(title: '시작하기', press: (){Navigator.pushNamed(context, '/mbti');})
           ],
         ),
       ),

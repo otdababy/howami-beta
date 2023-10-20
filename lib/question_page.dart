@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:howami/question.dart';
 import 'package:howami/rate.dart';
 import 'package:howami/ratebar.dart';
+import 'package:howami/start_button.dart';
 import 'package:size_config/size_config.dart';
 
 class QuestionPage extends StatefulWidget {
@@ -43,6 +44,17 @@ class _QuestionPageState extends State<QuestionPage> {
             Padding(padding: EdgeInsets.all(30)),
             Question(title: 'Q2. 나는 ~ 소리를 들어본적이 있다'),
             Padding(padding: EdgeInsets.all(30)),
+            Question(title: 'Q2. 나는 ~ 소리를 들어본적이 있다'),
+            Padding(padding: EdgeInsets.all(30)),
+            Question(title: 'Q2. 나는 ~ 소리를 들어본적이 있다'),
+            Padding(padding: EdgeInsets.all(30)),
+            Question(title: 'Q2. 나는 ~ 소리를 들어본적이 있다'),
+            Padding(padding: EdgeInsets.all(30)),
+            Question(title: 'Q2. 나는 ~ 소리를 들어본적이 있다'),
+            Padding(padding: EdgeInsets.all(30)),
+            StartButton(title: '제출', press: (){Navigator.pushNamed(context, '/result');}),
+            Padding(padding: EdgeInsets.all(30)),
+
           ],
         ),
       ),
