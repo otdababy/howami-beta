@@ -20,6 +20,7 @@ class MyApp extends StatelessWidget {
       referenceWidth: 375,
       builder: (BuildContext context, Orientation orientation) {
         return MaterialApp(
+
             title: 'Flutter Demo',
             theme: ThemeData(
               // This is the theme of your application.
@@ -35,6 +36,7 @@ class MyApp extends StatelessWidget {
             ),
             home: const MyHomePage(title: 'Flutter Demo Home Page'));
       },
+
     );
   }
 }
