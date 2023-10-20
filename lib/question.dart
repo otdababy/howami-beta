@@ -39,14 +39,15 @@ class _QuestionState extends State<Question> {
         ),
         Container(height: 10.h),
         RateBar((val) => setState(()=> _callback(val))),
-        DefaultTextStyle(
-            style: TextStyle(
-              color: Colors.black,
-              fontFamily: 'SnowCrab',
-              fontSize: 18,
-            ),
-            child: Text(_clicked.toString(),textAlign: TextAlign.center,)
-        ),
+        // For checking if states are changed automatically
+        // DefaultTextStyle(
+        //     style: TextStyle(
+        //       color: Colors.black,
+        //       fontFamily: 'SnowCrab',
+        //       fontSize: 18,
+        //     ),
+        //     child: Text(_clicked.toString(),textAlign: TextAlign.center,)
+        // ),
       //  callback: (val) => setState(()=> _clicked = val)
       ],
     );
