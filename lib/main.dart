@@ -82,7 +82,8 @@ class _MyHomePageState extends State<MyHomePage> {
               style: TextStyle(
                   color: Colors.black,
                   fontWeight: FontWeight.w900,
-                  fontSize:30.w
+                  fontSize:30.w,
+                  fontFamily: 'SnowCrab',
               ),
               maxLines: 2,
             ),
@@ -94,6 +95,7 @@ class _MyHomePageState extends State<MyHomePage> {
               style: TextStyle(
                   color: Colors.black,
                   fontWeight: FontWeight.w900,
+                  fontFamily: 'SnowCrab',
                   fontSize:15.w
               ),
               maxLines: 2,

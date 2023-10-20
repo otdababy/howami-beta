@@ -39,7 +39,7 @@ class _QuestionState extends State<Question> {
         ),
         Container(height: 10.h),
         RateBar((val) => setState(()=> _callback(val))),
-        // For checking if states are changed automatically
+        // // For checking if states are changed automatically
         // DefaultTextStyle(
         //     style: TextStyle(
         //       color: Colors.black,
@@ -47,8 +47,8 @@ class _QuestionState extends State<Question> {
         //       fontSize: 18,
         //     ),
         //     child: Text(_clicked.toString(),textAlign: TextAlign.center,)
-        // ),
-      //  callback: (val) => setState(()=> _clicked = val)
+       //  // ),
+       // _callback: (val) => setState(()=> _clicked = val)
       ],
     );
   }

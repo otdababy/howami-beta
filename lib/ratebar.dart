@@ -41,7 +41,7 @@ class _RateBarState extends State<RateBar> {
             GestureDetector(
               onTap: (){
                 _callback(
-                  1,
+                  -5,
                 );
                 setState(() {
                   // clicked = 1;
@@ -83,7 +83,7 @@ class _RateBarState extends State<RateBar> {
             GestureDetector(
               onTap: (){
                 _callback(
-                  2,
+                  -3,
                 );
                 setState(() {
                   // clicked = 2;
@@ -117,7 +117,7 @@ class _RateBarState extends State<RateBar> {
             GestureDetector(
               onTap: (){
                 _callback(
-                  3,
+                  0,
                 );
                 setState(() {
                   // clicked = 3;
@@ -151,7 +151,7 @@ class _RateBarState extends State<RateBar> {
             GestureDetector(
               onTap: (){
                 _callback(
-                  4,
+                  3,
                 );
                 setState(() {
                   // clicked = 4;
@@ -168,10 +168,10 @@ class _RateBarState extends State<RateBar> {
                 height: 50,
                 decoration: BoxDecoration(
                   shape: BoxShape.circle,
-                  color: Clicked4? Colors.greenAccent:Colors.white,
+                  color: Clicked4? Colors.green:Colors.white,
                   border: Border.all(
                     width: 1.0,
-                    color: Colors.greenAccent,
+                    color: Colors.green,
                   ),
                 ),
               ),
@@ -202,10 +202,10 @@ class _RateBarState extends State<RateBar> {
                 height: 60,
                 decoration: BoxDecoration(
                   shape: BoxShape.circle,
-                  color: Clicked5? Colors.greenAccent: Colors.white,
+                  color: Clicked5? Colors.green: Colors.white,
                   border: Border.all(
                     width: 1.0,
-                    color: Colors.greenAccent,
+                    color: Colors.green,
                   ),
                 ),
               ),

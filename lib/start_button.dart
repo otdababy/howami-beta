@@ -21,7 +21,7 @@ class StartButton extends StatelessWidget {
         onPressed: null,
         child: Text(
             title,
-            style: TextStyle(fontSize: 12.w, fontWeight: FontWeight.w700,
+            style: TextStyle(fontSize: 12.w, fontWeight: FontWeight.w700, fontFamily: 'SnowCrab',
                 color: Colors.white )
         ),
         style: TextButton.styleFrom(

@@ -4,6 +4,8 @@ import 'package:howami/rate.dart';
 import 'package:howami/ratebar.dart';
 import 'package:howami/start_button.dart';
 import 'package:size_config/size_config.dart';
+import 'package:flutter/services.dart';
+
 
 class ResultPage extends StatelessWidget {
   const ResultPage({
@@ -29,16 +31,18 @@ class ResultPage extends StatelessWidget {
                 style: TextStyle(
                     color: Colors.black,
                     fontWeight: FontWeight.w900,
-                    fontSize:30.w
+                    fontSize:30.w,
+                    fontFamily: 'SnowCrab',
                 ),
                 maxLines: 2,
               ),
               Text(
-                '90% ENFP 입니다.',
+                '$addedResult% ENFP 입니다.',
                 style: TextStyle(
                     color: Colors.black,
                     fontWeight: FontWeight.w900,
-                    fontSize:30.w
+                    fontSize:30.w,
+                    fontFamily: 'SnowCrab',
                 ),
               ),
               Container(height: 25.w,),
@@ -47,27 +51,36 @@ class ResultPage extends StatelessWidget {
                 style: TextStyle(
                     color: Colors.black,
                     fontWeight: FontWeight.w700,
-                    fontSize:15.w
+                    fontSize:15.w,
+                    fontFamily: 'SnowCrab',
                 ),
               ),
               Container(height: 70.w,),
-              Text(
-                "링크 공유",
-                style: TextStyle(
-                    color: Colors.black,
-                    fontWeight: FontWeight.w700,
-                    fontSize:13.w
+              GestureDetector(
+                onTap: () async {
+                  await Clipboard.setData(ClipboardData(text: "https://mbti-37d6b.web.app/#"));
+                  // copied successfully
+                },
+                child: Text(
+                  "링크 공유",
+                  style: TextStyle(
+                      color: Colors.black,
+                      fontWeight: FontWeight.w700,
+                      fontSize:13.w,
+                      fontFamily: 'SnowCrab',
+                  ),
                 ),
               ),
               Container(height: 25.h,),
-              Text(
-                addedResult.toString(),
-                style: TextStyle(
-                    color: Colors.black,
-                    fontWeight: FontWeight.w700,
-                    fontSize:13.w
-                ),
-              ),
+              // Text(
+              //   addedResult.toString(),
+              //   style: TextStyle(
+              //       color: Colors.black,
+              //       fontWeight: FontWeight.w700,
+              //       fontSize:13.w,
+              //       fontFamily: 'SnowCrab',
+              //   ),
+              // ),
               StartButton(title: '다시하기', press: (){Navigator.pushNamed(context, '/main');})
             ],
           ),
