@@ -40,17 +40,8 @@ class _QuestionPageState extends State<QuestionPage> {
             ),//ENFP 정확도 테스트
             Padding(padding: EdgeInsets.all(30)),
             Question(title: 'Q1. 나는 ~ 소리를 들어본적이 있다'),
-            Padding(padding: EdgeInsets.all(10)),
-            RateBar(),//레이트바 로우
             Padding(padding: EdgeInsets.all(30)),
-            DefaultTextStyle(
-                style: TextStyle(
-                  color: Colors.black,
-                  fontFamily: 'SnowCrab',
-                  fontSize: 18,
-                ),
-                child: Text('Q2. 나는 ~ 소리를 들어본적이 있다',textAlign: TextAlign.center,)
-            ), //레이트바 로우
+            Question(title: 'Q2. 나는 ~ 소리를 들어본적이 있다'),
             Padding(padding: EdgeInsets.all(30)),
           ],
         ),
