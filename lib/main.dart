@@ -1,5 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:howami/main_test.dart';
+import 'package:howami/mbti_page.dart';
+import 'package:howami/mbti_select.dart';
+import 'package:howami/question_page.dart';
+import 'package:howami/result_page.dart';
+import 'package:howami/start_button.dart';
 
 import 'package:size_config/size_config.dart';
 
@@ -18,27 +23,34 @@ class MyApp extends StatelessWidget {
       referenceWidth: 375,
       builder: (BuildContext context, Orientation orientation) {
         return MaterialApp(
-          title: 'Flutter Demo',
-          theme: ThemeData(
-            // This is the theme of your application.
-            //
-            // Try running your application with "flutter run". You'll see the
-            // application has a blue toolbar. Then, without quitting the app, try
-            // changing the primarySwatch below to Colors.green and then invoke
-            // "hot reload" (press "r" in the console where you ran "flutter run",
-            // or simply save your changes to "hot reload" in a Flutter IDE).
-            // Notice that the counter didn't reset back to zero; the application
-            // is not restarted.
-            primarySwatch: Colors.blue,
-          ),
-          home: const MyHomePage(title: 'Flutter Demo Home Page'));
-         },
+            title: 'Flutter Demo',
+            theme: ThemeData(
+              // This is the theme of your application.
+              //
+              // Try running your application with "flutter run". You'll see the
+              // application has a blue toolbar. Then, without quitting the app, try
+              // changing the primarySwatch below to Colors.green and then invoke
+              // "hot reload" (press "r" in the console where you ran "flutter run",
+              // or simply save your changes to "hot reload" in a Flutter IDE).
+              // Notice that the counter didn't reset back to zero; the application
+              // is not restarted.
+              primarySwatch: Colors.blue,
+            ),
+            routes: {
+              '/mbti': (context) => MbtiPage(),
+              // '/enfp': (context) => QuestionPage(),
+              // '/result': (context) => ResultPage(),
+              '/main' : (context) => MyHomePage()
+              // '/first': (context) => Screen1(),
+            },
+            home: const MyHomePage());
+      },
     );
   }
 }
 
 class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key, required this.title});
+  const MyHomePage({super.key});
 
   // This widget is the home page of your application. It is stateful, meaning
   // that it has a State object (defined below) that contains fields that affect
@@ -49,93 +61,49 @@ class MyHomePage extends StatefulWidget {
   // used by the build method of the State. Fields in a Widget subclass are
   // always marked "final".
 
-  final String title;
+  // final String title;
 
   @override
   State<MyHomePage> createState() => _MyHomePageState();
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
-  void _incrementCounter() {
-    setState(() {
-      // This call to setState tells the Flutter framework that something has
-      // changed in this State, which causes it to rerun the build method below
-      // so that the display can reflect the updated values. If we changed
-      // _counter without calling setState(), then the build method would not be
-      // called again, and so nothing would appear to happen.
-      _counter++;
-    });
-  }
 
   @override
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        body: Scrollbar(
-          thumbVisibility: false,
-          child: SingleChildScrollView(
-            child: Padding(
-              padding: EdgeInsets.fromLTRB(0, 30, 0, 20),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Padding(
-                    padding:  EdgeInsets.all(25.w),
-                    child: Text(
-                      '나는 얼마나???/????',
-                      style: TextStyle(
-                          color: Colors.black,
-                          fontWeight: FontWeight.w900,
-                          fontSize:20.w
-                      ),
-                      maxLines: 2,
-                    ),
-                  ),
-                  Padding(
-                    padding: EdgeInsets.fromLTRB(25.w, 0, 0, 0),
-                    child: Text(
-                      '간단한 질문 & 답변으로',
-                      style: TextStyle(
-                          color: Colors.black,
-                          fontWeight: FontWeight.w700,
-                          fontSize:18.w
-                      ),
-                      maxLines: 2,
-                    ),
-                  ),
-                  Padding(
-                    padding: EdgeInsets.fromLTRB(25.w, 0, 0, 0),
-                    child: Text(
-                      '자신에 대해 알아보자',
-                      style: TextStyle(
-                          color: Colors.black,
-                          fontWeight: FontWeight.w700,
-                          fontSize:18.w
-                      ),
-                      maxLines: 2,
-                    ),
-                  ),
-                  Container(
-                    height: 40.w,
-                  ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: [
-                      TestMain(title: 'MBTI 정확도 테스트' ),
-                      TestMain(title: "나는 잘생겼을까/이쁠까?"),
-                    ],
-                  ),
-                ],
+        body: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text(
+              'MBTI 정확도 테스트',
+              style: TextStyle(
+                  color: Colors.black,
+                  fontWeight: FontWeight.w900,
+                  fontSize:30.w
               ),
+              maxLines: 2,
             ),
-          ),
+            Container(
+              height: 15.w,
+            ),
+            Text(
+              '내 MBTI, 이대로 괜찮은가',
+              style: TextStyle(
+                  color: Colors.black,
+                  fontWeight: FontWeight.w900,
+                  fontSize:15.w
+              ),
+              maxLines: 2,
+            ),
+            Container(
+              height: 40.w,
+            ),
+            StartButton(title: '시작하기', press: (){Navigator.pushNamed(context, '/mbti');})
+          ],
         ),
-        floatingActionButton: FloatingActionButton(
-          onPressed: _incrementCounter,
-          tooltip: 'Increment',
-          child: const Icon(Icons.add),
-        ), // This trailing comma makes auto-formatting nicer for build methods.
       ),
     );
   }
