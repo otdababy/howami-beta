@@ -98,26 +98,70 @@ class _QuestionPageState extends State<QuestionPage> {
             Padding(padding: EdgeInsets.all(30)),
             Question(questions[19], (val) => setState(()=> _answersChecked[19] = val)),
             Padding(padding: EdgeInsets.all(60)),
-            StartButton(title: '제출', press: (){
-              int result = 0;
-              for (int i = 0; i < _answersChecked.length; i++) {
-                int currentElement = _answersChecked[i];
-                // Check if the current element is in the 'backwards' list
-                if (backwards.contains(i)) {
-                  result -= currentElement;
-                  continue;
-                } else {
-                  result += currentElement;
+            StartButton(title: '제출', press: () async {
+              if (_answersChecked.contains(0)){
+                await showDialog(
+                    context: context,
+                    builder: (BuildContext context) {
+                  return AlertDialog(
+                    title: Padding(
+                      padding: EdgeInsets.only(top: (25.0.h)),
+                      child: Center(
+                        child: Text(
+                        '다 작성하세요 붕~쉰아~',
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                              color: Colors.black,
+                              fontFamily: 'SnowCrab',
+                              fontSize: 20.w,
+                              fontWeight: FontWeight.w700
+                          ),
+                        ),
+                      ),
+                    ),
+                    actions: [
+                      Container(
+                        width: 60.w,
+                        height: 30.w,
+                        child: TextButton(
+                            style: TextButton.styleFrom(
+                              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
+                              backgroundColor: Colors.black,
+                            ),
+                            onPressed: () {
+                              Navigator.of(context).pop();
+                            },
+                            child: Text('확인', style: TextStyle(fontFamily: 'SnowCrab',fontWeight: FontWeight.w500, fontSize: (12.w),color: Colors.white),)
+                        ),
+                      )
+                    ],
+                  );
                 }
+              );
+              }
+              else{
+                int result = 0;
+                for (int i = 0; i < _answersChecked.length; i++) {
+                  int currentElement = _answersChecked[i];
+                  // Check if the current element is in the 'backwards' list
+                  if (backwards.contains(i)) {
+                    result -= currentElement;
+                    continue;
+                  } else {
+                    result += currentElement;
+                  }
+                }
+                Navigator.push(context,
+                  MaterialPageRoute(
+                    builder: (_) => ResultPage(
+                      addedResult: result,
+                      // _answersChecked.reduce((a, b) => backwards.contains(/*index of the current element*/) ? a - b : a + b),
+                    ),),
+                );
               }
 
-              Navigator.push(context,
-                  MaterialPageRoute(
-                  builder: (_) => ResultPage(
-                  addedResult: result,
-                  // _answersChecked.reduce((a, b) => backwards.contains(/*index of the current element*/) ? a - b : a + b),
-              ),),
-            );}),
+
+              }),
             Padding(padding: EdgeInsets.all(30)),
 
           ],
