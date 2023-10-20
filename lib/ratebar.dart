@@ -1,21 +1,37 @@
 import 'package:flutter/material.dart';
 import 'package:howami/rate.dart';
+
+
+typedef MapCallback = void Function(int val);
+
 class RateBar extends StatefulWidget {
-  const RateBar({Key? key}) : super(key: key);
+    late MapCallback _callback;
+    RateBar(MapCallback callback){
+      _callback = callback;
+  }
 
   @override
-  State<RateBar> createState() => _RateBarState();
+  State<RateBar> createState() => _RateBarState(_callback);
 }
 
 class _RateBarState extends State<RateBar> {
+    late MapCallback _callback;
+    _RateBarState(MapCallback callback){
+      this._callback = callback;
+    }
+
+  // late MapCallback callback;
   bool Clicked1 = false;
   bool Clicked2 = false;
   bool Clicked3 = false;
   bool Clicked4 = false;
   bool Clicked5 = false;
+  // int clicked = 0;
+
+
+
 
   @override
-
   Widget build(BuildContext context) {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,//화면에서 센터에
@@ -24,7 +40,11 @@ class _RateBarState extends State<RateBar> {
           children: [
             GestureDetector(
               onTap: (){
+                _callback(
+                  1,
+                );
                 setState(() {
+                  // clicked = 1;
                   Clicked1 = !Clicked1;
                   Clicked2 = false;
                   Clicked3 = false;
@@ -62,7 +82,11 @@ class _RateBarState extends State<RateBar> {
           children: [
             GestureDetector(
               onTap: (){
+                _callback(
+                  2,
+                );
                 setState(() {
+                  // clicked = 2;
                   Clicked2 = !Clicked2;
                   Clicked1 = false;
                   Clicked3 = false;
@@ -92,7 +116,11 @@ class _RateBarState extends State<RateBar> {
           children: [
             GestureDetector(
               onTap: (){
+                _callback(
+                  3,
+                );
                 setState(() {
+                  // clicked = 3;
                   Clicked1 = false;
                   Clicked2 = false;
                   Clicked3 = !Clicked3;
@@ -122,7 +150,11 @@ class _RateBarState extends State<RateBar> {
           children: [
             GestureDetector(
               onTap: (){
+                _callback(
+                  4,
+                );
                 setState(() {
+                  // clicked = 4;
                   Clicked1 = false;
                   Clicked2 = false;
                   Clicked3 = false;
@@ -152,7 +184,11 @@ class _RateBarState extends State<RateBar> {
           children: [
             GestureDetector(
               onTap: (){
+                _callback(
+                  5,
+                );
                 setState(() {
+                  // clicked = 5;
                   Clicked1 = false;
                   Clicked2 = false;
                   Clicked3 = false;

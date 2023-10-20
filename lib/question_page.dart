@@ -13,7 +13,7 @@ class QuestionPage extends StatefulWidget {
 }
 
 class _QuestionPageState extends State<QuestionPage> {
-
+  List<int> _answersChecked = [];
 
 
   @override
@@ -40,17 +40,10 @@ class _QuestionPageState extends State<QuestionPage> {
               ],
             ),//ENFP 정확도 테스트
             Padding(padding: EdgeInsets.all(30)),
-            Question(title: 'Q1. 나는 ~ 소리를 들어본적이 있다'),
+            Question('Q1. 나는 ~ 소리를 들어본적이 있다', (val) => setState(()=> _answersChecked[0] = val)),
             Padding(padding: EdgeInsets.all(30)),
-            Question(title: 'Q2. 나는 ~ 소리를 들어본적이 있다'),
+            Question('Q2. 나는 ~ 소리를 들어본적이 있다', (val) => setState(()=> _answersChecked[1] = val)),
             Padding(padding: EdgeInsets.all(30)),
-            Question(title: 'Q2. 나는 ~ 소리를 들어본적이 있다'),
-            Padding(padding: EdgeInsets.all(30)),
-            Question(title: 'Q2. 나는 ~ 소리를 들어본적이 있다'),
-            Padding(padding: EdgeInsets.all(30)),
-            Question(title: 'Q2. 나는 ~ 소리를 들어본적이 있다'),
-            Padding(padding: EdgeInsets.all(30)),
-            Question(title: 'Q2. 나는 ~ 소리를 들어본적이 있다'),
             Padding(padding: EdgeInsets.all(30)),
             StartButton(title: '제출', press: (){Navigator.pushNamed(context, '/result');}),
             Padding(padding: EdgeInsets.all(30)),
