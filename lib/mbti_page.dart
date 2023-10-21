@@ -105,8 +105,40 @@ class MbtiPage extends StatelessWidget {
                                 ),),
                             );},
                           child: mbtiSelect(title: 'ENFJ')
-                      ),]
                       ),
+                      GestureDetector(
+                          onTap: (){
+                            Navigator.push(context,
+                              MaterialPageRoute(
+                                builder: (_) => QuestionPage(
+                                  title: "ENTJ",
+                                  questions: const ['1. 방정리가 되야, 공부나 일을 시작한다',
+                                    ' 2. 할 일은 몰아서 하는 편이다 ',
+                                    ' 3. 이성을 볼 때, 외모보다는 대화가 잘통하는것이 중요하다',
+                                    '4. 종종 우유부단하다는 소리를 듣는다',
+                                    '5. 연인에게 다정다감한 편이다',
+                                    '6. 나는 참을성이 부족하다',
+                                    '7. 주위에서 바쁘게 산다라는 말을 종종 듣는다',
+                                    '8. 나는 측은지심을 잘 느끼는 편이다',
+                                    '9. 나는 거절을 잘한다' ,
+                                    '10. 연인간에 서운한 일이 있어도, 꾹 참는다',
+                                    '11. 경쟁적인 분위기를 즐긴다' ,
+                                    '12. 남의 눈치를 보는 편이다',
+                                    '13. 내가 좋아하지 않는 일이더라도 열정적이다',
+                                    '14. 매사에 관심이 많지만 쉽게 실증난다' ,
+                                    '15. 사소한 일에 감동을 받는다',
+                                    '16. 한번 상대방에게 빠지면 깊게 빠진다',
+                                    '17. 나는 내가 직접 눈으로 본 것만 믿는다',
+                                    '18. 길바닥에 쓰레기가 보이면 줍는 편이다',
+                                    '19. 한번 눈에 나면 관계를 칼같이 끊는다',
+                                    '20. 세상은 아직 살만하다'],
+                                  backwards: [2,6,9,11,14],
+                                ),),
+                            );},
+                          child: mbtiSelect(title: 'ENTJ')
+                      ),
+                    ]
+                  ),
                 ),
                 Padding(
                   padding: EdgeInsets.fromLTRB(25.w, 0, 25.w, 10.w),
@@ -155,7 +187,7 @@ class MbtiPage extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
                       mbtiSelect(title: 'ESTJ'),
-                      mbtiSelect(title: 'ESTP'),
+                      mbtiSelect(title: 'ENTP'),
                       mbtiSelect(title: 'INFP'),
                     ],
                   ),

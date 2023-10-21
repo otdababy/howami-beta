@@ -4,14 +4,14 @@ import 'package:size_config/size_config.dart';
 
 
 class TestMain extends StatelessWidget {
-  const TestMain({
+  const TestMain( {
     Key? key,
     required this.title,
-    // required this.press,
+    required this.press,
   }) : super(key: key);
 
   final String title;
-  // final GestureTapCallback press;
+  final GestureTapCallback press;
 
   @override
   Widget build(BuildContext context) {
@@ -20,8 +20,8 @@ class TestMain extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         Container(
-          width: 130.w,
-          height: 130.w,
+          width: 200.w,
+          height: 200.w,
           color: Colors.grey,
         ),
         SizedBox(height: (5.w)),
@@ -41,7 +41,7 @@ class TestMain extends StatelessWidget {
               ),
               Container(height: 12.h),
               TextButton(
-                  onPressed: null,
+                  onPressed: press,
                   child: Text(
                       '시작하기',
                       style: TextStyle(fontSize: 12.w, fontWeight: FontWeight.w700,
