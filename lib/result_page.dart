@@ -119,8 +119,8 @@ class ResultPage extends StatelessWidget {
                           ),
                           actions: [
                             Container(
-                              width: 60.w,
-                              height: 30.w,
+                              width: 60,
+                              height: 30,
                               child: TextButton(
                                   style: TextButton.styleFrom(
                                     shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
@@ -143,7 +143,7 @@ class ResultPage extends StatelessWidget {
                   style: TextStyle(
                       color: Colors.black,
                       fontWeight: FontWeight.w700,
-                      fontSize:13.w,
+                      fontSize:13,
                       fontFamily: 'SnowCrab',
                   ),
                 ),
