@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:howami/main_test.dart';
 import 'package:howami/scenario_page.dart';
+import 'package:howami/start_button.dart';
 
 import 'package:size_config/size_config.dart';
 
@@ -99,71 +100,69 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        body: Scrollbar(
-          thumbVisibility: false,
-          child: SingleChildScrollView(
-            child: Padding(
-              padding: EdgeInsets.fromLTRB(0, 30, 0, 20),
-              child: Column(
+        appBar: PreferredSize(
+          preferredSize: Size.fromHeight(80.0),
+          child: AppBar(
+            backgroundColor: Colors.white,
+            title: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Image.asset(
+                  'images/wordmark.png',
+                  fit: BoxFit.fitHeight,
+                  height: 60,
+                )
+              ],
+            ),
+            toolbarHeight: 150,
+          ),
+        ),
+        body: Padding(
+          padding:  EdgeInsets.all(40.0),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Padding(
-                    padding:  EdgeInsets.all(25.w),
-                    child: Text(
-                      '나는 얼마나???/????',
-                      style: TextStyle(
-                          color: Colors.black,
-                          fontWeight: FontWeight.w900,
-                          fontSize:20.w
-                      ),
-                      maxLines: 2,
+                  Text(
+                    '간단한 질문 & 답변으로',
+                    style: TextStyle(
+                        fontFamily: 'SnowCrab',
+                        color: Colors.black,
+                        fontWeight: FontWeight.w500,
+                        fontSize:18.w
                     ),
+                    maxLines: 2,
                   ),
-                  Padding(
-                    padding: EdgeInsets.fromLTRB(25.w, 0, 0, 0),
-                    child: Text(
-                      '간단한 질문 & 답변으로',
-                      style: TextStyle(
-                          color: Colors.black,
-                          fontWeight: FontWeight.w700,
-                          fontSize:18.w
-                      ),
-                      maxLines: 2,
+                  Text(
+                    '자신에 대해 알아보자',
+                    style: TextStyle(
+                        fontFamily: 'SnowCrab',
+                        color: Colors.black,
+                        fontWeight: FontWeight.w500,
+                        fontSize:18.w
                     ),
-                  ),
-                  Padding(
-                    padding: EdgeInsets.fromLTRB(25.w, 0, 0, 0),
-                    child: Text(
-                      '자신에 대해 알아보자',
-                      style: TextStyle(
-                          color: Colors.black,
-                          fontWeight: FontWeight.w700,
-                          fontSize:18.w
-                      ),
-                      maxLines: 2,
-                    ),
-                  ),
-                  Container(
-                    height: 40.w,
-                  ),
-                  TestMain(title: 'MBTI 정확도 테스트' , press: (){Navigator.pushNamed(context, '/mbti_main');}),
-                  Container(
-                    height: 40.w,
-                  ),
-                  TestMain(title: "나는 잘생겼을까/이쁠까?", press: (){Navigator.pushNamed(context, '/scenario');}),
-                  Container(
-                    height: 40.w,
+                    maxLines: 2,
                   ),
                 ],
               ),
-            ),
+              Column(
+                children: [
+                  TestMain(title: 'MBTI T력 테스트' , press: (){Navigator.pushNamed(context, '/scenario');}),
+                  Container(height: 70.h,)
+                ],
+              ),
+              Container()
+              // TestMain(title: "나는 잘생겼을까/이쁠까?", press: (){Navigator.pushNamed(context, '/scenario');}),
+              // Container(
+              //   height: 40.w,
+              // ),
+            ],
           ),
         ),
-        floatingActionButton: FloatingActionButton(
-          onPressed: _incrementCounter,
-          tooltip: 'Increment',
-          child: const Icon(Icons.add),
-        ), // This trailing comma makes auto-formatting nicer for build methods.
       ),
     );
   }

@@ -33,8 +33,9 @@ class TestMain extends StatelessWidget {
               Text(
                 title,
                 style: TextStyle(
+                    fontFamily: 'SnowCrab',
                     color: Colors.black,
-                    fontWeight: FontWeight.w900,
+                    fontWeight: FontWeight.w300,
                     fontSize:14.w
                 ),
                 maxLines: 2,
@@ -44,7 +45,7 @@ class TestMain extends StatelessWidget {
                   onPressed: press,
                   child: Text(
                       '시작하기',
-                      style: TextStyle(fontSize: 12.w, fontWeight: FontWeight.w700,
+                      style: TextStyle(fontFamily: 'SnowCrab',fontSize: 12.w, fontWeight: FontWeight.w300,
                           color: Colors.white )
                   ),
                   style: TextButton.styleFrom(
