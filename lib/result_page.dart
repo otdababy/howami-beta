@@ -8,54 +8,93 @@ import 'package:flutter/services.dart';
 
 
 class ResultPage extends StatelessWidget {
-  const ResultPage({
+   ResultPage({
     Key? key,
     required this.addedResult,
+    required this.title,
+    required this.body,
+     required this.idx,
     // required this.press,`
   }) : super(key: key);
 
   final int addedResult;
+  final String title;
+  final List<String> body;
+  final int idx;
 
 
   @override
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        body: Center(
+        body: Padding(
+          padding:  EdgeInsets.all(30.w),
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Text(
-                '당신은',
+                "-$title-",
                 style: TextStyle(
                     color: Colors.black,
                     fontWeight: FontWeight.w900,
-                    fontSize:30.w,
+                    fontSize:45,
                     fontFamily: 'SnowCrab',
                 ),
                 maxLines: 2,
               ),
-              Text(
-                '$addedResult% ENFP 입니다.',
-                style: TextStyle(
-                    color: Colors.black,
-                    fontWeight: FontWeight.w900,
-                    fontSize:30.w,
-                    fontFamily: 'SnowCrab',
-                ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(
+                    'T력 ',
+                    style: TextStyle(
+                        color: Colors.black,
+                        fontWeight: FontWeight.w900,
+                        fontSize:40,
+                        fontFamily: 'SnowCrab',
+                    ),
+                  ),
+                  Container(width: 5.w,),
+                  Text(
+                    '$addedResult%',
+                    style: TextStyle(
+                      color: Colors.red,
+                      fontWeight: FontWeight.w900,
+                      fontSize:40,
+                      fontFamily: 'SnowCrab',
+                    ),
+                  ),
+                ],
               ),
-              Container(height: 25.w,),
-              Text(
-                "당신은 어쩌구.....\n어쩌구\n어쩌구\n어쩌구",
-                style: TextStyle(
-                    color: Colors.black,
-                    fontWeight: FontWeight.w700,
-                    fontSize:15.w,
-                    fontFamily: 'SnowCrab',
+              Container(height: 25.h,),
+              Container(
+                width: 250.w,
+                height: 250.h,
+                child: Image.asset(
+                  'images/t_strength/$idx.png',
+                  fit: BoxFit.contain,
                 ),
+
               ),
-              Container(height: 70.w,),
+              Column(
+                children: [
+                  for ( var i in body )
+                    Padding(
+                      padding:  EdgeInsets.all(6.h),
+                      child: Text(
+                        i.toString(),
+                        style: TextStyle(
+                          color: Colors.black,
+                          fontWeight: FontWeight.w300,
+                          fontSize:15,
+                          fontFamily: 'SnowCrab',
+                        ),
+                      ),
+                    )
+                ],
+              ),
+              Container(height: 50.h,),
               GestureDetector(
                 onTap: () async {
                   await Clipboard.setData(ClipboardData(text: "https://mbti-37d6b.web.app/#"));
@@ -72,7 +111,7 @@ class ResultPage extends StatelessWidget {
                                 style: TextStyle(
                                     color: Colors.black,
                                     fontFamily: 'SnowCrab',
-                                    fontSize: 20.w,
+                                    fontSize: 15,
                                     fontWeight: FontWeight.w500
                                 ),
                               ),
@@ -90,7 +129,7 @@ class ResultPage extends StatelessWidget {
                                   onPressed: () {
                                     Navigator.of(context).pop();
                                   },
-                                  child: Text('확인', style: TextStyle(fontFamily: 'SnowCrab',fontWeight: FontWeight.w500, fontSize: (12.w),color: Colors.white),)
+                                  child: Text('확인', style: TextStyle(fontFamily: 'SnowCrab',fontWeight: FontWeight.w500, fontSize: (12),color: Colors.white),)
                               ),
                             )
                           ],

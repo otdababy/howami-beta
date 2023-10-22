@@ -151,13 +151,13 @@ class _QuestionPageState extends State<QuestionPage> {
                     result += currentElement;
                   }
                 }
-                Navigator.push(context,
-                  MaterialPageRoute(
-                    builder: (_) => ResultPage(
-                      addedResult: result,
-                      // _answersChecked.reduce((a, b) => backwards.contains(/*index of the current element*/) ? a - b : a + b),
-                    ),),
-                );
+                // Navigator.push(context,
+                //   MaterialPageRoute(
+                //     builder: (_) => ResultPage(
+                //       addedResult: result,
+                //       // _answersChecked.reduce((a, b) => backwards.contains(/*index of the current element*/) ? a - b : a + b),
+                //     ),),
+                // );
               }
 
 
