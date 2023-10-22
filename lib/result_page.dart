@@ -38,7 +38,7 @@ class ResultPage extends StatelessWidget {
                 style: TextStyle(
                     color: Colors.black,
                     fontWeight: FontWeight.w900,
-                    fontSize:45,
+                    fontSize:30,
                     fontFamily: 'SnowCrab',
                 ),
                 maxLines: 2,
@@ -51,7 +51,7 @@ class ResultPage extends StatelessWidget {
                     style: TextStyle(
                         color: Colors.black,
                         fontWeight: FontWeight.w900,
-                        fontSize:40,
+                        fontSize:25,
                         fontFamily: 'SnowCrab',
                     ),
                   ),
@@ -61,7 +61,7 @@ class ResultPage extends StatelessWidget {
                     style: TextStyle(
                       color: Colors.red,
                       fontWeight: FontWeight.w900,
-                      fontSize:40,
+                      fontSize:25,
                       fontFamily: 'SnowCrab',
                     ),
                   ),
@@ -77,6 +77,7 @@ class ResultPage extends StatelessWidget {
                 ),
 
               ),
+              Container(height: 25.h,),
               Column(
                 children: [
                   for ( var i in body )
@@ -142,7 +143,7 @@ class ResultPage extends StatelessWidget {
                   "링크 공유",
                   style: TextStyle(
                       color: Colors.black,
-                      fontWeight: FontWeight.w700,
+                      fontWeight: FontWeight.w600,
                       fontSize:13.w,
                       fontFamily: 'SnowCrab',
                   ),

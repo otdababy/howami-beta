@@ -37,12 +37,11 @@ class MyApp extends StatelessWidget {
               // or simply save your changes to "hot reload" in a Flutter IDE).
               // Notice that the counter didn't reset back to zero; the application
               // is not restarted.
-              primarySwatch: Colors.blue,
             ),
             routes: {
               '/mbti_main': (context) => MbtiMainPage(),
               '/mbti_main': (context) => MbtiPage(),
-              '/scenario' : (context) => ScenarioPage(const ['더 기분 좋은 칭찬은?','시험을 망쳤을 때 위로되는 말은?' ,'지갑을 잃어버렸다' , '친구가 연애상담을 해달라고 한다, 그 때 나는' , '내가 더 잘푸는 문제는' , '남들이 보는 나는' , '예상치 못한 상황이 발생하면' , '더 좋아하는 영화 장르는?' , '나 열심히 돈 모아서 옷 샀어' , '내 주위 친구는 대부분'],
+              '/scenario' : (context) => ScenarioPage(const ['더 기분 좋은 칭찬은?','시험을 망쳤을 때 위로되는 말은?' ,'지갑을 잃어버렸다' , '친구가 연애상담을 해달라고 한다,\n 그 때 나는' , '내가 더 잘푸는 문제는' , '남들이 보는 나는' , '예상치 못한 상황이 발생하면' , '더 좋아하는 영화 장르는?' , '나 열심히 돈 모아서 옷 샀어' , '내 주위 친구는 대부분'],
                 const [1,2,2,2,2,2,1,2,1,2], const ['넌 진짜 똑똑하구나' , '넌 정말 따뜻한 마음을 가졌구나' ,
         '나도 망했어… 이번에 너무 어렵지 않았냐','평균이 좀 낮아서 괜찮지 않을까?',
         '지갑 속 잃어버린 인생네컷이 아른거린다','민증, 카드들을 재발급 받을 생각에 어지럽다',
@@ -125,34 +124,11 @@ class _MyHomePageState extends State<MyHomePage> {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(
-                    '간단한 질문 & 답변으로',
-                    style: TextStyle(
-                        fontFamily: 'SnowCrab',
-                        color: Colors.black,
-                        fontWeight: FontWeight.w500,
-                        fontSize:18.w
-                    ),
-                    maxLines: 2,
-                  ),
-                  Text(
-                    '자신에 대해 알아보자',
-                    style: TextStyle(
-                        fontFamily: 'SnowCrab',
-                        color: Colors.black,
-                        fontWeight: FontWeight.w500,
-                        fontSize:18.w
-                    ),
-                    maxLines: 2,
-                  ),
-                ],
-              ),
-              Column(
-                children: [
+                  Container(height: 120.h,),
                   TestMain(title: 'MBTI T력 테스트' , press: (){Navigator.pushNamed(context, '/scenario');}),
-                  Container(height: 70.h,)
+                  Container(height: 70.h,),
+
                 ],
               ),
               Container()
