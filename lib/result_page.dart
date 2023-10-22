@@ -69,7 +69,7 @@ class ResultPage extends StatelessWidget {
               ),
               Container(height: 25.h,),
               Container(
-                width: 250.w,
+                width: 250.h,
                 height: 250.h,
                 child: Image.asset(
                   'images/t_strength/$idx.png',
