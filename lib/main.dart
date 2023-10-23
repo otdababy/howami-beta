@@ -77,7 +77,7 @@ class _MyHomePageState extends State<MyHomePage> {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Image.asset(
-                  'images/wordmark.png',
+                  'assets/images/wordmark.png',
                   fit: BoxFit.fitHeight,
                   height: 60,
                 )

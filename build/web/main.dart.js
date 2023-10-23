@@ -56319,7 +56319,7 @@ A.jR.prototype={
 ab(){return new A.I_(B.l)}}
 A.I_.prototype={
 H(a){var s=null,r=t.p
-return A.ob(!0,A.E0(new A.nY(A.a7U(B.h,A.f4(A.a([A.RX("images/wordmark.png",B.eD,60)],r),B.q,B.aK,B.p),150),new A.I(1/0,80),s),new A.av(new A.X(40,40,40,40),A.cB(A.a([A.cB(A.a([A.bO(s,s,s,s,A.ed(120),s,s,s),new A.EW("MBTI T\ub825 \ud14c\uc2a4\ud2b8",new A.a37(a),s),A.bO(s,s,s,s,A.ed(70),s,s,s)],r),B.q,B.L,B.p),A.bO(s,s,s,s,s,s,s,s)],r),B.f_,B.dG,B.p),s)),!0)}}
+return A.ob(!0,A.E0(new A.nY(A.a7U(B.h,A.f4(A.a([A.RX("assets/images/wordmark.png",B.eD,60)],r),B.q,B.aK,B.p),150),new A.I(1/0,80),s),new A.av(new A.X(40,40,40,40),A.cB(A.a([A.cB(A.a([A.bO(s,s,s,s,A.ed(120),s,s,s),new A.EW("MBTI T\ub825 \ud14c\uc2a4\ud2b8",new A.a37(a),s),A.bO(s,s,s,s,A.ed(70),s,s,s)],r),B.q,B.L,B.p),A.bO(s,s,s,s,s,s,s,s)],r),B.f_,B.dG,B.p),s)),!0)}}
 A.a37.prototype={
 $0(){A.a8z(this.a,"/scenario",t.X)},
 $S:0}
@@ -56684,10 +56684,10 @@ s.w=s.r=s.f=s.e=!1
 s.x=!s.x},
 $S:0}
 A.o9.prototype={
-H(a){var s,r,q,p,o=this,n=null,m="SnowCrab",l=t.p,k=A.a7U(B.h,A.f4(A.a([A.RX("images/wordmark.png",B.eD,60)],l),B.q,B.aK,B.p),150),j=A.c6("-"+o.d+"-",2,A.bx(n,n,B.j,n,n,n,n,n,m,n,n,25,n,n,B.b_,n,n,!0,n,n,n,n,n,n,n,n),n,n),i=A.bO(n,n,n,n,10,n,n,n),h=A.f4(A.a([A.c6("T\ub825 ",n,A.bx(n,n,B.j,n,n,n,n,n,m,n,n,25,n,n,B.b_,n,n,!0,n,n,n,n,n,n,n,n),n,n),A.bO(n,n,n,n,n,n,n,A.aD(5)),A.c6(""+o.c+"%",n,A.bx(n,n,B.cu,n,n,n,n,n,m,n,n,25,n,n,B.b_,n,n,!0,n,n,n,n,n,n,n,n),n,n)],l),B.q,B.aK,B.p),g=A.bO(n,n,n,n,25,n,n,n),f=A.bO(n,A.RX("assets/images/t_strength/"+o.f+".png",B.vu,n),n,n,250,n,n,250),e=A.bO(n,n,n,n,25,n,n,n),d=A.a([],l)
+H(a){var s,r,q,p,o=this,n=null,m="SnowCrab",l=t.p,k=A.a7U(B.h,A.f4(A.a([A.RX("assets/images/wordmark.png",B.eD,60)],l),B.q,B.aK,B.p),150),j=A.c6("-"+o.d+"-",2,A.bx(n,n,B.j,n,n,n,n,n,m,n,n,25,n,n,B.b_,n,n,!0,n,n,n,n,n,n,n,n),n,n),i=A.bO(n,n,n,n,10,n,n,n),h=A.f4(A.a([A.c6("T\ub825 ",n,A.bx(n,n,B.j,n,n,n,n,n,m,n,n,25,n,n,B.b_,n,n,!0,n,n,n,n,n,n,n,n),n,n),A.bO(n,n,n,n,n,n,n,A.aD(5)),A.c6(""+o.c+"%",n,A.bx(n,n,B.cu,n,n,n,n,n,m,n,n,25,n,n,B.b_,n,n,!0,n,n,n,n,n,n,n,n),n,n)],l),B.q,B.aK,B.p),g=A.bO(n,n,n,n,25,n,n,n),f=A.bO(n,A.RX("assets/images/t_strength/"+o.f+".png",B.vu,n),n,n,190,n,n,190),e=A.bO(n,n,n,n,25,n,n,n),d=A.a([],l)
 for(s=o.e,r=0;r<6;++r){q=s[r]
-p=A.ed(6)
-d.push(new A.av(new A.X(p,p,p,p),A.c6(q,n,new A.o(!0,B.j,n,m,n,n,15,B.aG,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n),n,n),n))}return A.ob(!0,A.E0(new A.nY(k,new A.I(1/0,80),n),new A.av(new A.X(40,40,40,40),A.cB(A.a([j,i,h,g,f,e,A.cB(d,B.q,B.L,B.p),A.bO(n,n,n,n,40,n,n,n),A.et(n,A.c6("\ub9c1\ud06c \uacf5\uc720",n,A.bx(n,n,B.j,n,n,n,n,n,m,n,n,16,n,n,B.lB,n,n,!0,n,n,n,n,n,n,n,n),n,n),B.K,!1,n,n,n,n,n,n,n,n,n,n,new A.Wu(a),n,n,n,n,n,n),new A.ou("\ub2e4\uc2dc\ud558\uae30",new A.Wv(a),n)],l),B.q,B.dG,B.p),n)),!0)}}
+p=A.ed(4)
+d.push(new A.av(new A.X(p,p,p,p),A.c6(q,n,new A.o(!0,B.j,n,m,n,n,12,B.aG,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n),n,n),n))}return A.ob(!0,A.E0(new A.nY(k,new A.I(1/0,80),n),new A.av(new A.X(40,40,40,40),A.cB(A.a([j,i,h,g,f,e,A.cB(d,B.q,B.L,B.p),A.bO(n,n,n,n,40,n,n,n),A.et(n,A.c6("\ub9c1\ud06c \uacf5\uc720",n,A.bx(n,n,B.j,n,n,n,n,n,m,n,n,16,n,n,B.lB,n,n,!0,n,n,n,n,n,n,n,n),n,n),B.K,!1,n,n,n,n,n,n,n,n,n,n,new A.Wu(a),n,n,n,n,n,n),new A.ou("\ub2e4\uc2dc\ud558\uae30",new A.Wv(a),n)],l),B.q,B.dG,B.p),n)),!0)}}
 A.Wu.prototype={
 $0(){var s=0,r=A.a2(t.H),q=this
 var $async$$0=A.a3(function(a,b){if(a===1)return A.a_(b,r)

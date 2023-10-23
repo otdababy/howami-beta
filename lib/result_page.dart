@@ -36,7 +36,7 @@ class ResultPage extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Image.asset(
-                  'images/wordmark.png',
+                  'assets/images/wordmark.png',
                   fit: BoxFit.fitHeight,
                   height: 60,
                 )
@@ -46,7 +46,7 @@ class ResultPage extends StatelessWidget {
           ),
         ),
         body: Padding(
-          padding:  EdgeInsets.all(40),
+          padding:  EdgeInsets.fromLTRB(40, 40, 40, 80),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             crossAxisAlignment: CrossAxisAlignment.center,
@@ -88,8 +88,8 @@ class ResultPage extends StatelessWidget {
               ),
               Container(height: 25,),
               Container(
-                width: 250,
-                height: 250,
+                width: 180,
+                height: 180,
                 child: Image.asset(
                   'assets/images/t_strength/$idx.png',
                   fit: BoxFit.contain,
@@ -101,13 +101,13 @@ class ResultPage extends StatelessWidget {
                 children: [
                   for ( var i in body )
                     Padding(
-                      padding:  EdgeInsets.all(6.h),
+                      padding:  EdgeInsets.all(4.h),
                       child: Text(
                         i.toString(),
                         style: TextStyle(
                           color: Colors.black,
                           fontWeight: FontWeight.w300,
-                          fontSize:15,
+                          fontSize:12,
                           fontFamily: 'SnowCrab',
                         ),
                       ),
