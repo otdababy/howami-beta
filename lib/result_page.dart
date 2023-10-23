@@ -47,9 +47,9 @@ class ResultPage extends StatelessWidget {
             toolbarHeight: 150,
           ),
         ),
-        body: Padding(
-          padding:  EdgeInsets.fromLTRB(40, 40, 40, 40),
-          child: Expanded(
+        body: SingleChildScrollView(
+          child: Padding(
+            padding:  EdgeInsets.fromLTRB(40, 40, 40, 40),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               crossAxisAlignment: CrossAxisAlignment.center,
