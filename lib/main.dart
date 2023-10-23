@@ -1,5 +1,6 @@
 
 
+import 'package:colorful_safe_area/colorful_safe_area.dart';
 import 'package:flutter/material.dart';
 import 'package:howami/main_test.dart';
 import 'package:howami/scenario_page.dart';
@@ -84,7 +85,9 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
+    return ColorfulSafeArea(
+      color: Colors.white.withOpacity(0),
+      overflowRules: OverflowRules.all(true),
       child: Scaffold(
         appBar: PreferredSize(
           preferredSize: Size.fromHeight(60.0),

@@ -1,3 +1,4 @@
+import 'package:colorful_safe_area/colorful_safe_area.dart';
 import 'package:flutter/material.dart';
 import 'package:howami/question.dart';
 import 'package:howami/rate.dart';
@@ -25,8 +26,11 @@ class ResultPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
+    return ColorfulSafeArea(
+      color: Colors.white.withOpacity(0),
+      overflowRules: OverflowRules.all(true),
       child: Scaffold(
+        backgroundColor: Colors.black,
         appBar: PreferredSize(
           preferredSize: Size.fromHeight(60.0),
           child: AppBar(
