@@ -25,7 +25,7 @@ class StartButton extends StatelessWidget {
                 color: Colors.white )
         ),
         style: TextButton.styleFrom(
-          fixedSize: Size(130,32),
+          fixedSize: Size(130,42),
           shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
           backgroundColor: Colors.black,
         ),

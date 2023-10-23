@@ -41,6 +41,24 @@ class _ScenarioPageState extends State<ScenarioPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: PreferredSize(
+        preferredSize: Size.fromHeight(80.0),
+        child: AppBar(
+          backgroundColor: Colors.white,
+          title: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Image.asset(
+                'assets/images/wordmark.png',
+                fit: BoxFit.fitHeight,
+                height: 60,
+              )
+            ],
+          ),
+          toolbarHeight: 150,
+        ),
+      ),
       body: Padding(
         padding:  EdgeInsets.all(30.w),
         child: Column(

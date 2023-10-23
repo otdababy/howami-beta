@@ -27,8 +27,26 @@ class ResultPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
+        appBar: PreferredSize(
+          preferredSize: Size.fromHeight(80.0),
+          child: AppBar(
+            backgroundColor: Colors.white,
+            title: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Image.asset(
+                  'images/wordmark.png',
+                  fit: BoxFit.fitHeight,
+                  height: 60,
+                )
+              ],
+            ),
+            toolbarHeight: 150,
+          ),
+        ),
         body: Padding(
-          padding:  EdgeInsets.all(30.w),
+          padding:  EdgeInsets.all(40),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             crossAxisAlignment: CrossAxisAlignment.center,
@@ -38,11 +56,12 @@ class ResultPage extends StatelessWidget {
                 style: TextStyle(
                     color: Colors.black,
                     fontWeight: FontWeight.w900,
-                    fontSize:30,
+                    fontSize:25,
                     fontFamily: 'SnowCrab',
                 ),
                 maxLines: 2,
               ),
+              Container(height: 10,),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
@@ -67,17 +86,17 @@ class ResultPage extends StatelessWidget {
                   ),
                 ],
               ),
-              Container(height: 25.h,),
+              Container(height: 25,),
               Container(
-                width: 250.h,
-                height: 250.h,
+                width: 250,
+                height: 250,
                 child: Image.asset(
-                  'images/t_strength/$idx.png',
+                  'assets/images/t_strength/$idx.png',
                   fit: BoxFit.contain,
                 ),
 
               ),
-              Container(height: 25.h,),
+              Container(height: 25,),
               Column(
                 children: [
                   for ( var i in body )
@@ -95,7 +114,7 @@ class ResultPage extends StatelessWidget {
                     )
                 ],
               ),
-              Container(height: 50.h,),
+              Container(height: 40,),
               GestureDetector(
                 onTap: () async {
                   await Clipboard.setData(ClipboardData(text: "https://mbti-37d6b.web.app/#"));
@@ -104,7 +123,7 @@ class ResultPage extends StatelessWidget {
                       builder: (BuildContext context) {
                         return AlertDialog(
                           title: Padding(
-                            padding: EdgeInsets.only(top: (25.0.h)),
+                            padding: EdgeInsets.only(top: (25.0)),
                             child: Center(
                               child: Text(
                                 '링크가 복사되었습니다!',
@@ -145,13 +164,13 @@ class ResultPage extends StatelessWidget {
                       color: Colors.black,
 
                       fontWeight: FontWeight.w600,
-                      fontSize:13.w,
+                      fontSize:16,
 
                       fontFamily: 'SnowCrab',
                   ),
                 ),
               ),
-              Container(height: 25.h,),
+              // Container(height: 25),
               // Text(
               //   addedResult.toString(),
               //   style: TextStyle(
