@@ -48,145 +48,148 @@ class ResultPage extends StatelessWidget {
           ),
         ),
         body: Padding(
-          padding:  EdgeInsets.fromLTRB(40, 40, 40, 80),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              Text(
-                "$title",
-                style: TextStyle(
-                    color: Colors.black,
-                    fontWeight: FontWeight.w800,
-                    fontSize:25,
-                    fontFamily: 'SnowCrab',
-                ),
-                maxLines: 2,
-              ),
-              Container(height: 10,),
-              Container(height: 25,),
-              Container(
-                width: 200,
-                height: 200,
-                child: Image.asset(
-                  'assets/images/t_strength/$idx.png',
-                  fit: BoxFit.contain,
-                ),
-
-              ),
-              Container(height: 25,),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Text(
-                    'T력 ',
-                    style: TextStyle(
+          padding:  EdgeInsets.fromLTRB(40, 40, 40, 40),
+          child: Expanded(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Text(
+                  "$title",
+                  style: TextStyle(
                       color: Colors.black,
-                      fontWeight: FontWeight.w300,
+                      fontWeight: FontWeight.w800,
                       fontSize:25,
                       fontFamily: 'SnowCrab',
-                    ),
                   ),
-                  Container(width: 5.w,),
-                  Text(
-                    '$addedResult%',
-                    style: TextStyle(
-                      color: Colors.red,
-                      fontWeight: FontWeight.w900,
-                      fontSize:25,
-                      fontFamily: 'SnowCrab',
-                    ),
+                  maxLines: 2,
+                ),
+                Container(height: 10,),
+                Container(height: 25,),
+                Container(
+                  width: 200,
+                  height: 200,
+                  child: Image.asset(
+                    'assets/images/t_strength/$idx.png',
+                    fit: BoxFit.contain,
                   ),
-                ],
-              ),
-              Container(height: 20,),
-              Column(
-                children: [
-                  for ( var i in body )
-                    Padding(
-                      padding:  EdgeInsets.all(4.h),
-                      child: Text(
-                        i.toString(),
-                        style: TextStyle(
-                          color: Colors.black,
-                          fontWeight: FontWeight.w300,
-                          fontSize:15,
-                          fontFamily: 'SnowCrab',
-                        ),
+
+                ),
+                Container(height: 25,),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text(
+                      'T력 ',
+                      style: TextStyle(
+                        color: Colors.black,
+                        fontWeight: FontWeight.w300,
+                        fontSize:25,
+                        fontFamily: 'SnowCrab',
                       ),
-                    )
-                ],
-              ),
-              Container(height: 25,),
-              GestureDetector(
-                onTap: () async {
-                  await Clipboard.setData(ClipboardData(text: "https://mbti-37d6b.web.app/#"));
-                  await showDialog(
-                      context: context,
-                      builder: (BuildContext context) {
-                        return AlertDialog(
-                          title: Padding(
-                            padding: EdgeInsets.only(top: (25.0)),
-                            child: Center(
-                              child: Text(
-                                '링크가 복사되었습니다!',
-                                textAlign: TextAlign.center,
-                                style: TextStyle(
-                                    color: Colors.black,
-                                    fontFamily: 'SnowCrab',
-                                    fontSize: 15,
-                                    fontWeight: FontWeight.w500
+                    ),
+                    Container(width: 5.w,),
+                    Text(
+                      '$addedResult%',
+                      style: TextStyle(
+                        color: Colors.red,
+                        fontWeight: FontWeight.w900,
+                        fontSize:25,
+                        fontFamily: 'SnowCrab',
+                      ),
+                    ),
+                  ],
+                ),
+                Container(height: 20,),
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    for ( var i in body )
+                      Padding(
+                        padding:  EdgeInsets.all(7.h),
+                        child: Text(
+                          i.toString(),
+                          style: TextStyle(
+                            color: Colors.black,
+                            fontWeight: FontWeight.w300,
+                            fontSize:16,
+                            fontFamily: 'SnowCrab',
+                          ),
+                        ),
+                      )
+                  ],
+                ),
+                Container(height: 25,),
+                GestureDetector(
+                  onTap: () async {
+                    await Clipboard.setData(ClipboardData(text: "https://mbti-37d6b.web.app/#"));
+                    await showDialog(
+                        context: context,
+                        builder: (BuildContext context) {
+                          return AlertDialog(
+                            title: Padding(
+                              padding: EdgeInsets.only(top: (25.0)),
+                              child: Center(
+                                child: Text(
+                                  '링크가 복사되었습니다!',
+                                  textAlign: TextAlign.center,
+                                  style: TextStyle(
+                                      color: Colors.black,
+                                      fontFamily: 'SnowCrab',
+                                      fontSize: 15,
+                                      fontWeight: FontWeight.w500
+                                  ),
                                 ),
                               ),
                             ),
-                          ),
-                          actions: [
-                            Container(
-                              width: 60,
-                              height: 30,
-                              child: TextButton(
-                                  style: TextButton.styleFrom(
-                                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
-                                    backgroundColor: Colors.black,
-                                  ),
-                                  onPressed: () {
-                                    Navigator.of(context).pop();
-                                  },
-                                  child: Text('확인', style: TextStyle(fontFamily: 'SnowCrab',fontWeight: FontWeight.w500, fontSize: (12),color: Colors.white),)
-                              ),
-                            )
-                          ],
-                        );
-                      }
-                  );
-                  // copied successfully
-                },
-                child: Text(
-                  "링크 공유",
-                  style: TextStyle(
-                      color: Colors.black,
+                            actions: [
+                              Container(
+                                width: 60,
+                                height: 30,
+                                child: TextButton(
+                                    style: TextButton.styleFrom(
+                                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
+                                      backgroundColor: Colors.black,
+                                    ),
+                                    onPressed: () {
+                                      Navigator.of(context).pop();
+                                    },
+                                    child: Text('확인', style: TextStyle(fontFamily: 'SnowCrab',fontWeight: FontWeight.w500, fontSize: (12),color: Colors.white),)
+                                ),
+                              )
+                            ],
+                          );
+                        }
+                    );
+                    // copied successfully
+                  },
+                  child: Text(
+                    "링크 공유",
+                    style: TextStyle(
+                        color: Colors.black,
 
-                      fontWeight: FontWeight.w600,
-                      fontSize:16,
+                        fontWeight: FontWeight.w600,
+                        fontSize:16,
 
-                      fontFamily: 'SnowCrab',
+                        fontFamily: 'SnowCrab',
+                    ),
                   ),
                 ),
-              ),
-              // Container(height: 25),
-              // Text(
-              //   addedResult.toString(),
-              //   style: TextStyle(
-              //       color: Colors.black,
-              //       fontWeight: FontWeight.w700,
-              //       fontSize:13.w,
-              //       fontFamily: 'SnowCrab',
-              //   ),
-              // ),
-              Container(height: 10,),
-              StartButton(title: '다시하기', press: (){Navigator.pushNamed(context, '/main');}),
-              Container(height: 40,),
-            ],
+                // Container(height: 25),
+                // Text(
+                //   addedResult.toString(),
+                //   style: TextStyle(
+                //       color: Colors.black,
+                //       fontWeight: FontWeight.w700,
+                //       fontSize:13.w,
+                //       fontFamily: 'SnowCrab',
+                //   ),
+                // ),
+                Container(height: 10,),
+                StartButton(title: '다시하기', press: (){Navigator.pushNamed(context, '/main');}),
+                Container(height: 40,),
+              ],
+            ),
           ),
         ),
       ),

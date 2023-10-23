@@ -9,12 +9,29 @@ import 'package:size_config/size_config.dart';
 import 'mbti_main_page.dart';
 import 'mbti_page.dart';
 
+const MaterialColor white = const MaterialColor(
+  0xFFFFFFFF,
+  const <int, Color>{
+    50: const Color(0xFFFFFFFF),
+    100: const Color(0xFFFFFFFF),
+    200: const Color(0xFFFFFFFF),
+    300: const Color(0xFFFFFFFF),
+    400: const Color(0xFFFFFFFF),
+    500: const Color(0xFFFFFFFF),
+    600: const Color(0xFFFFFFFF),
+    700: const Color(0xFFFFFFFF),
+    800: const Color(0xFFFFFFFF),
+    900: const Color(0xFFFFFFFF),
+  },
+);
+
 void main() {
   runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
+
 
   // This widget is the root of your application.
   @override
@@ -27,6 +44,7 @@ class MyApp extends StatelessWidget {
 
             title: 'Porong',
             theme: ThemeData(
+              primarySwatch: white,
             ),
             routes: {
               '/mbti_main': (context) => MbtiMainPage(),
