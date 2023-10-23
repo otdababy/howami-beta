@@ -50,11 +50,16 @@ class _ScenarioPageState extends State<ScenarioPage> {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              Image.asset(
-                'assets/images/wordmark.png',
-                fit: BoxFit.fitHeight,
-                height: 40,
+              GestureDetector(
+                onTap: (){
+                  Navigator.pushNamed(context, '/main');
+                },
+                child: Image.asset(
+                  'assets/images/wordmark.png',
+                  fit: BoxFit.fitHeight,
+                  height: 40,
 
+                ),
               )
             ],
           ),
