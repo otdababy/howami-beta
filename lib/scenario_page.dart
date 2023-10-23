@@ -92,15 +92,15 @@ class _ScenarioPageState extends State<ScenarioPage> {
                    children: [
                      TextButton(
                         onPressed: (){setState(() {
-                          if(_current == 9){
-                            _markBox = 1;
+                          if( _answers[_current] == 1)
+                          {
+                            _score = _score + 1;
                           }
                           if(_current != 9){
                             _current = _current + 1;
                           }
-                          if( _answers[_current] == 1)
-                          {
-                            _score = _score + 1;
+                          else{
+                            _markBox = 1;
                           }
 
                         });},
@@ -117,15 +117,15 @@ class _ScenarioPageState extends State<ScenarioPage> {
                      Container(height: 20.h,),
                      TextButton(
                          onPressed: (){setState(() {
-                           if(_current == 9){
-                             _markBox = 2;
+                           if( _answers[_current] == 2)
+                           {
+                             _score = _score + 1;
                            }
                            if(_current != 9){
                              _current = _current + 1;
                            }
-                           if( _answers[_current] == 2)
-                           {
-                             _score = _score + 1;
+                           else{
+                             _markBox = 1;
                            }
                          });},
                          child: Text(

@@ -130,7 +130,7 @@ class ResultPage extends StatelessWidget {
                 Container(height: 25,),
                 GestureDetector(
                   onTap: () async {
-                    await Clipboard.setData(ClipboardData(text: "https://porong-c8472.web.app"));
+                    await Clipboard.setData(const ClipboardData(text: "https://porong.site"));
                     await showDialog(
                         context: context,
                         builder: (BuildContext context) {
