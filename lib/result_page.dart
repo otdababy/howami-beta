@@ -28,8 +28,9 @@ class ResultPage extends StatelessWidget {
     return SafeArea(
       child: Scaffold(
         appBar: PreferredSize(
-          preferredSize: Size.fromHeight(80.0),
+          preferredSize: Size.fromHeight(60.0),
           child: AppBar(
+            automaticallyImplyLeading: false,
             backgroundColor: Colors.white,
             title: Row(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -38,7 +39,8 @@ class ResultPage extends StatelessWidget {
                 Image.asset(
                   'assets/images/wordmark.png',
                   fit: BoxFit.fitHeight,
-                  height: 60,
+                  height: 40,
+
                 )
               ],
             ),
@@ -52,26 +54,37 @@ class ResultPage extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Text(
-                "-$title-",
+                "$title",
                 style: TextStyle(
                     color: Colors.black,
-                    fontWeight: FontWeight.w900,
+                    fontWeight: FontWeight.w800,
                     fontSize:25,
                     fontFamily: 'SnowCrab',
                 ),
                 maxLines: 2,
               ),
               Container(height: 10,),
+              Container(height: 25,),
+              Container(
+                width: 200,
+                height: 200,
+                child: Image.asset(
+                  'assets/images/t_strength/$idx.png',
+                  fit: BoxFit.contain,
+                ),
+
+              ),
+              Container(height: 25,),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text(
                     'T력 ',
                     style: TextStyle(
-                        color: Colors.black,
-                        fontWeight: FontWeight.w900,
-                        fontSize:25,
-                        fontFamily: 'SnowCrab',
+                      color: Colors.black,
+                      fontWeight: FontWeight.w300,
+                      fontSize:25,
+                      fontFamily: 'SnowCrab',
                     ),
                   ),
                   Container(width: 5.w,),
@@ -86,17 +99,7 @@ class ResultPage extends StatelessWidget {
                   ),
                 ],
               ),
-              Container(height: 25,),
-              Container(
-                width: 180,
-                height: 180,
-                child: Image.asset(
-                  'assets/images/t_strength/$idx.png',
-                  fit: BoxFit.contain,
-                ),
-
-              ),
-              Container(height: 25,),
+              Container(height: 20,),
               Column(
                 children: [
                   for ( var i in body )
@@ -107,14 +110,14 @@ class ResultPage extends StatelessWidget {
                         style: TextStyle(
                           color: Colors.black,
                           fontWeight: FontWeight.w300,
-                          fontSize:12,
+                          fontSize:15,
                           fontFamily: 'SnowCrab',
                         ),
                       ),
                     )
                 ],
               ),
-              Container(height: 40,),
+              Container(height: 25,),
               GestureDetector(
                 onTap: () async {
                   await Clipboard.setData(ClipboardData(text: "https://mbti-37d6b.web.app/#"));
@@ -180,7 +183,9 @@ class ResultPage extends StatelessWidget {
               //       fontFamily: 'SnowCrab',
               //   ),
               // ),
-              StartButton(title: '다시하기', press: (){Navigator.pushNamed(context, '/main');})
+              Container(height: 10,),
+              StartButton(title: '다시하기', press: (){Navigator.pushNamed(context, '/main');}),
+              Container(height: 40,),
             ],
           ),
         ),

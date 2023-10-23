@@ -42,8 +42,9 @@ class _ScenarioPageState extends State<ScenarioPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: PreferredSize(
-        preferredSize: Size.fromHeight(80.0),
+        preferredSize: Size.fromHeight(60.0),
         child: AppBar(
+          automaticallyImplyLeading: false,
           backgroundColor: Colors.white,
           title: Row(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -52,7 +53,8 @@ class _ScenarioPageState extends State<ScenarioPage> {
               Image.asset(
                 'assets/images/wordmark.png',
                 fit: BoxFit.fitHeight,
-                height: 60,
+                height: 40,
+
               )
             ],
           ),
@@ -64,19 +66,8 @@ class _ScenarioPageState extends State<ScenarioPage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            DefaultTextStyle(
-              style: TextStyle(
-                color: Colors.black,
-                fontSize: 24,
-                fontFamily: 'SnowCrab',
-              ),
-              child: Text(
-                'MBTI T력 테스트',
-                style: TextStyle(
-                  fontFamily: 'SnowCrab',
-                ),
-                textAlign: TextAlign.left,),
-            ),
+            Padding(padding: EdgeInsets.all(10)),
+
             Column(
               children: [
 

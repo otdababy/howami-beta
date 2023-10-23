@@ -69,8 +69,9 @@ class _MyHomePageState extends State<MyHomePage> {
     return SafeArea(
       child: Scaffold(
         appBar: PreferredSize(
-          preferredSize: Size.fromHeight(80.0),
+          preferredSize: Size.fromHeight(60.0),
           child: AppBar(
+            automaticallyImplyLeading: false,
             backgroundColor: Colors.white,
             title: Row(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -79,7 +80,8 @@ class _MyHomePageState extends State<MyHomePage> {
                 Image.asset(
                   'assets/images/wordmark.png',
                   fit: BoxFit.fitHeight,
-                  height: 60,
+                  height: 40,
+
                 )
               ],
             ),

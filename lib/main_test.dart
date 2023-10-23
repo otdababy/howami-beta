@@ -19,12 +19,19 @@ class TestMain extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
-        Container(
+        /*Container(
           width: 200.w,
           height: 200.w,
           color: Colors.grey,
+        ),*/
+        Image.asset(
+          'assets/images/t_strength/1.png',
+          fit: BoxFit.fitHeight,
+          height: 300,
+          width: 300,
+
         ),
-        SizedBox(height: (5.w)),
+        SizedBox(height: (10.w)),
         Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
@@ -40,7 +47,7 @@ class TestMain extends StatelessWidget {
                 ),
                 maxLines: 2,
               ),
-              Container(height: 12.h),
+              Container(height: 25.h),
               TextButton(
                   onPressed: press,
                   child: Text(
