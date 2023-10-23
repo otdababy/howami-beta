@@ -217,7 +217,7 @@ class _ScenarioPageState extends State<ScenarioPage> {
 
                                 }
                                 else if (_score >6 && _score <=8){
-                                  _title = '암 랔 tt';
+                                  _title = '암 Like tt~';
                                   _body = ['- 공감과 해결책을 같이 제시해준다','- 내가 더 열심히 하지 뭐','- 은근 감성 따짐','- 때에 따라 바뀌는 카멜레온',
                                     '- 가끔 영화보면 눈물 찔끔','- 감정 기복 적은 평탄한 인생'];
                                   _idx = 4;
