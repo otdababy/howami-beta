@@ -58,7 +58,7 @@ class ResultPage extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Text(
-                  "$title",
+                  "\"$title\"",
                   style: TextStyle(
                       color: Colors.black,
                       fontWeight: FontWeight.w800,
@@ -125,7 +125,7 @@ class ResultPage extends StatelessWidget {
                 Container(height: 25,),
                 GestureDetector(
                   onTap: () async {
-                    await Clipboard.setData(ClipboardData(text: "https://mbti-37d6b.web.app/#"));
+                    await Clipboard.setData(ClipboardData(text: "https://porong-c8472.web.app"));
                     await showDialog(
                         context: context,
                         builder: (BuildContext context) {

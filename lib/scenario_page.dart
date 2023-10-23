@@ -237,11 +237,11 @@ class _ScenarioPageState extends State<ScenarioPage> {
                               });},
                               child: Text(
                                   '제출',
-                                  style: TextStyle(fontSize: 12.w, fontFamily: 'SnowCrab', fontWeight: FontWeight.w300,
+                                  style: TextStyle(fontSize: 12, fontFamily: 'SnowCrab', fontWeight: FontWeight.w300,
                                       color: Colors.white )
                               ),
                               style: TextButton.styleFrom(
-                                fixedSize: Size(130.w,40.h),
+                                fixedSize: Size(130,40),
                                 shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20.w)),
                                 backgroundColor: Colors.black,
                               )),

@@ -85,52 +85,53 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
-    return ColorfulSafeArea(
-      color: Colors.white.withOpacity(0),
-      overflowRules: OverflowRules.all(true),
-      child: Scaffold(
-        appBar: PreferredSize(
-          preferredSize: Size.fromHeight(60.0),
-          child: AppBar(
-            automaticallyImplyLeading: false,
-            backgroundColor: Colors.white,
-            title: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                Image.asset(
-                  'assets/images/wordmark.png',
-                  fit: BoxFit.fitHeight,
-                  height: 40,
-
-                )
-              ],
-            ),
-            toolbarHeight: 150,
-          ),
-        ),
-        body: Padding(
-          padding:  EdgeInsets.all(40.0),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+    return Scaffold(
+      appBar: PreferredSize(
+        preferredSize: Size.fromHeight(60.0),
+        child: AppBar(
+          automaticallyImplyLeading: false,
+          backgroundColor: Colors.white,
+          title: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              Column(
-                children: [
-                  Container(height: 120.h,),
-                  TestMain(title: 'MBTI T력 테스트' , press: (){Navigator.pushNamed(context, '/scenario');}),
-                  Container(height: 70.h,),
+              Image.asset(
+                'assets/images/wordmark.png',
+                fit: BoxFit.fitHeight,
+                height: 40,
 
-                ],
-              ),
-              Container()
-              // TestMain(title: "나는 잘생겼을까/이쁠까?", press: (){Navigator.pushNamed(context, '/scenario');}),
-              // Container(
-              //   height: 40.w,
-              // ),
+              )
             ],
           ),
+          toolbarHeight: 150,
         ),
+      ),
+      body: ColorfulSafeArea(
+        color: Colors.white.withOpacity(0),
+        overflowRules: OverflowRules.all(true),
+        child: Padding(
+            padding:  EdgeInsets.all(40.0),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Container(),
+                Column(
+                  children: [
+                    // Container(height: 120.h,),
+                    TestMain(title: 'MBTI T력 테스트' , press: (){Navigator.pushNamed(context, '/scenario');}),
+                    // Container(height: 70.h),
+
+                  ],
+                ),
+                Container()
+                // TestMain(title: "나는 잘생겼을까/이쁠까?", press: (){Navigator.pushNamed(context, '/scenario');}),
+                // Container(
+                //   height: 40.w,
+                // ),
+              ],
+            ),
+          ),
       ),
     );
   }
