@@ -69,7 +69,7 @@ class ResultPage extends StatelessWidget {
               ),
               Container(height: 25.h,),
               Container(
-                width: 250.w,
+                width: 250.h,
                 height: 250.h,
                 child: Image.asset(
                   'images/t_strength/$idx.png',
@@ -120,8 +120,8 @@ class ResultPage extends StatelessWidget {
                           ),
                           actions: [
                             Container(
-                              width: 60.w,
-                              height: 30.w,
+                              width: 60,
+                              height: 30,
                               child: TextButton(
                                   style: TextButton.styleFrom(
                                     shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
@@ -143,8 +143,10 @@ class ResultPage extends StatelessWidget {
                   "링크 공유",
                   style: TextStyle(
                       color: Colors.black,
+
                       fontWeight: FontWeight.w600,
                       fontSize:13.w,
+
                       fontFamily: 'SnowCrab',
                   ),
                 ),
