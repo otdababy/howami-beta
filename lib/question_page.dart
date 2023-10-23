@@ -25,7 +25,7 @@ class _QuestionPageState extends State<QuestionPage> {
   List<int> backwards;
   _QuestionPageState(this.title, this.questions, this.backwards);
 
-  final _answersChecked = List<int>.filled(20, 0, growable: false);
+  final _answersChecked = List<int>.filled(20, 2, growable: false);
 
 
 
@@ -99,7 +99,7 @@ class _QuestionPageState extends State<QuestionPage> {
             Question(questions[19], (val) => setState(()=> _answersChecked[19] = val)),
             Padding(padding: EdgeInsets.all(60)),
             StartButton(title: '제출', press: () async {
-              if (_answersChecked.contains(0)){
+              if (_answersChecked.contains(2)){
                 await showDialog(
                     context: context,
                     builder: (BuildContext context) {
@@ -108,7 +108,7 @@ class _QuestionPageState extends State<QuestionPage> {
                       padding: EdgeInsets.only(top: (25.0.h)),
                       child: Center(
                         child: Text(
-                        '다 작성하세요 붕~쉰아~',
+                        '모든 질문에 답해주세요!',
                           textAlign: TextAlign.center,
                           style: TextStyle(
                               color: Colors.black,
@@ -151,13 +151,13 @@ class _QuestionPageState extends State<QuestionPage> {
                     result += currentElement;
                   }
                 }
-                Navigator.push(context,
-                  MaterialPageRoute(
-                    builder: (_) => ResultPage(
-                      addedResult: result,
-                      // _answersChecked.reduce((a, b) => backwards.contains(/*index of the current element*/) ? a - b : a + b),
-                    ),),
-                );
+                // Navigator.push(context,
+                //   MaterialPageRoute(
+                //     builder: (_) => ResultPage(
+                //       addedResult: result,
+                //       // _answersChecked.reduce((a, b) => backwards.contains(/*index of the current element*/) ? a - b : a + b),
+                //     ),),
+                // );
               }
 
 

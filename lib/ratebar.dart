@@ -117,7 +117,7 @@ class _RateBarState extends State<RateBar> {
             GestureDetector(
               onTap: (){
                 _callback(
-                  0,
+                  1,
                 );
                 setState(() {
                   // clicked = 3;
