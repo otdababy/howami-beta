@@ -30,7 +30,6 @@ class ResultPage extends StatelessWidget {
       color: Colors.white.withOpacity(0),
       overflowRules: OverflowRules.all(true),
       child: Scaffold(
-        backgroundColor: Colors.black,
         appBar: PreferredSize(
           preferredSize: Size.fromHeight(60.0),
           child: AppBar(
