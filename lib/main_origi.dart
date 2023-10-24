@@ -145,11 +145,11 @@ class _MyHomePageState extends State<MyHomePage> {
                   Container(
                     height: 40.w,
                   ),
-                  TestMain(title: 'MBTI 정확도 테스트' , press: (){Navigator.pushNamed(context, '/mbti_main');}),
+                  // TestMain(title: 'MBTI 정확도 테스트' , press: (){Navigator.pushNamed(context, '/mbti_main');}),
                   Container(
                     height: 40.w,
                   ),
-                  TestMain(title: "나는 잘생겼을까/이쁠까?", press: (){Navigator.pushNamed(context, '/scenario');}),
+                  // TestMain(title: "나는 잘생겼을까/이쁠까?", press: (){Navigator.pushNamed(context, '/scenario');}),
                   Container(
                     height: 40.w,
                   ),

@@ -7,10 +7,12 @@ class TestMain extends StatelessWidget {
   const TestMain( {
     Key? key,
     required this.title,
+    required this.imgN,
     required this.press,
   }) : super(key: key);
 
   final String title;
+  final String imgN;
   final GestureTapCallback press;
 
   @override
@@ -25,7 +27,7 @@ class TestMain extends StatelessWidget {
           color: Colors.grey,
         ),*/
         Image.asset(
-          'assets/images/t_strength/1.png',
+          'assets/images/$imgN/5.png',
           fit: BoxFit.fitHeight,
           height: 300,
           width: 300,

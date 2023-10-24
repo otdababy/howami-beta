@@ -134,8 +134,8 @@ class _MyHomePageState extends State<MyHomePage> {
                   Column(
                     children: [
                       // Container(height: 120.h,),
-                      TestMain(title: 'MBTI T력 테스트' , press: (){Navigator.pushNamed(context, '/scenario');}),
-                      TestMain(title: '회복탄력성 테스트' , press: (){Navigator.pushNamed(context, '/mental');}),
+                      TestMain(title: 'MBTI T력 테스트' , imgN: 't_strength', press: (){Navigator.pushNamed(context, '/scenario');}),
+                      TestMain(title: '회복탄력성 테스트' , imgN: 'mental', press: (){Navigator.pushNamed(context, '/mental');}),
                       // Container(height: 70.h),
 
                     ],
