@@ -11,13 +11,14 @@ import 'package:flutter/services.dart';
 class ResultPage extends StatelessWidget {
    ResultPage({
     Key? key,
+     required this.test,
     required this.addedResult,
     required this.title,
     required this.body,
      required this.idx,
     // required this.press,`
   }) : super(key: key);
-
+  final String test;
   final int addedResult;
   final String title;
   final List<String> body;
@@ -88,7 +89,7 @@ class ResultPage extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text(
-                      'T력 ',
+                      test,
                       style: TextStyle(
                         color: Colors.black,
                         fontWeight: FontWeight.w300,
@@ -116,7 +117,7 @@ class ResultPage extends StatelessWidget {
                       Padding(
                         padding:  EdgeInsets.all(7.h),
                         child: Text(
-                          i.toString(),
+                          "- $i",
                           style: TextStyle(
                             color: Colors.black,
                             fontWeight: FontWeight.w300,

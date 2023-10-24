@@ -47,7 +47,7 @@ class TestMain extends StatelessWidget {
                 ),
                 maxLines: 2,
               ),
-              Container(height: 25.h),
+              Container(height: 25),
               TextButton(
                   onPressed: press,
                   child: Text(
@@ -60,6 +60,7 @@ class TestMain extends StatelessWidget {
                     shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20.w)),
                     backgroundColor: Colors.black,
                   )),
+              Container(height: 50),
             ],
           ),
         ),
