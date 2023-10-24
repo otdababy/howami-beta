@@ -1,18 +1,21 @@
 
 import 'package:flutter/material.dart';
+import 'package:howami/popup.dart';
 import 'package:howami/result_page.dart';
 import 'package:size_config/size_config.dart';
 
 
 class ScenarioPage extends StatefulWidget {
   late String _test;
+  late String _imgN;
   late List<String> _questions;
   late List<String> _choices;
   late List<int> _answers;
   late List<String> _results;
   late List<List<String>> _resultbody;
-  ScenarioPage(String test, List<String> questions,List<int> answers, List<String> choices, List<String> results, List<List<String>> resultbody){
+  ScenarioPage(String test, String imgN, List<String> questions,List<int> answers, List<String> choices, List<String> results, List<List<String>> resultbody){
     _test = test;
+    _imgN = imgN;
     _questions = questions;
     _answers = answers;
     _choices = choices;
@@ -22,18 +25,20 @@ class ScenarioPage extends StatefulWidget {
 
 
   @override
-  _ScenarioPageState createState() => _ScenarioPageState(_test, _questions, _answers, _choices, _results, _resultbody);
+  _ScenarioPageState createState() => _ScenarioPageState(_test, _imgN, _questions, _answers, _choices, _results, _resultbody);
 }
 
 class _ScenarioPageState extends State<ScenarioPage> {
   late String _test;
+  late String _imgN;
   late List<String> _questions;
   late List<int> _answers;
   late List<String> _choices;
   late List<String> _results;
   late List<List<String>> _resultbody;
-  _ScenarioPageState(String test, List<String> questions,List<int> answers, List<String> choices, List<String> results, List<List<String>> resultbody) {
+  _ScenarioPageState(String test,String imgN, List<String> questions,List<int> answers, List<String> choices, List<String> results, List<List<String>> resultbody) {
     _test = test;
+    _imgN = imgN;
     _questions = questions;
     _answers = answers;
     _choices = choices;
@@ -211,44 +216,56 @@ class _ScenarioPageState extends State<ScenarioPage> {
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
                           TextButton(
-                              onPressed: (){setState(() {
-                                if(_score <= 2){
-                                  _title = _results[0];
-                                  _body = _resultbody[0];
-
-                                  _idx = 1;
+                              onPressed: () async {
+                                if(_markBox == 0){
+                                  await showDialog(
+                                      context: context,
+                                      builder: (BuildContext context) {
+                                    return const Popup(title: "답을 체크해주세요!");
+                                  }
+                                );
                                 }
-                                else if (_score >2 && _score <=4){
-                                  _title = _results[1];
-                                  _body = _resultbody[1];
+                                else {
+                                  setState(() {
+                                    if(_score <= 2){
+                                      _title = _results[0];
+                                      _body = _resultbody[0];
 
-                                  _idx = 2;
+                                      _idx = 1;
+                                    }
+                                    else if (_score >2 && _score <=4){
+                                      _title = _results[1];
+                                      _body = _resultbody[1];
 
-                                }
-                                else if (_score >4 && _score <=6){
-                                  _title = _results[2];
-                                  _body = _resultbody[2];
-                                  _idx = 3;
+                                      _idx = 2;
 
-                                }
-                                else if (_score >6 && _score <=8){
-                                  _title = _results[3];
-                                  _body = _resultbody[3];
-                                  _idx = 4;
-                                }
-                                else{
-                                  _title = _results[4];
-                                  _body = _resultbody[4];
-                                  _idx = 5;
+                                    }
+                                    else if (_score >4 && _score <=6){
+                                      _title = _results[2];
+                                      _body = _resultbody[2];
+                                      _idx = 3;
 
+                                    }
+                                    else if (_score >6 && _score <=8){
+                                      _title = _results[3];
+                                      _body = _resultbody[3];
+                                      _idx = 4;
+                                    }
+                                    else{
+                                      _title = _results[4];
+                                      _body = _resultbody[4];
+                                      _idx = 5;
+
+                                    }
+                                    Navigator.push(context, MaterialPageRoute(
+                                      builder: (_) => ResultPage(test: _test, imgN: _imgN, addedResult: _score * 10, title: _title, body: _body, idx: _idx
+                                        // title = _title,
+                                        // body = _body,
+                                        // addedResult: _score,
+                                      ),),);
+                                  });
                                 }
-                                Navigator.push(context, MaterialPageRoute(
-                                  builder: (_) => ResultPage(test: _test, addedResult: _score * 10, title: _title, body: _body, idx: _idx
-                                    // title = _title,
-                                    // body = _body,
-                                    // addedResult: _score,
-                                  ),),);
-                              });},
+                                },
                               child: Text(
                                   '제출',
                                   style: TextStyle(fontSize: 12, fontFamily: 'SnowCrab', fontWeight: FontWeight.w300,

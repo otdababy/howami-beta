@@ -1,5 +1,6 @@
 import 'package:colorful_safe_area/colorful_safe_area.dart';
 import 'package:flutter/material.dart';
+import 'package:howami/popup.dart';
 import 'package:howami/question.dart';
 import 'package:howami/rate.dart';
 import 'package:howami/ratebar.dart';
@@ -12,6 +13,7 @@ class ResultPage extends StatelessWidget {
    ResultPage({
     Key? key,
      required this.test,
+     required this.imgN,
     required this.addedResult,
     required this.title,
     required this.body,
@@ -19,6 +21,7 @@ class ResultPage extends StatelessWidget {
     // required this.press,`
   }) : super(key: key);
   final String test;
+  final String imgN;
   final int addedResult;
   final String title;
   final List<String> body;
@@ -79,7 +82,7 @@ class ResultPage extends StatelessWidget {
                   width: 200,
                   height: 200,
                   child: Image.asset(
-                    'assets/images/t_strength/$idx.png',
+                    'assets/images/$imgN/$idx.png',
                     fit: BoxFit.contain,
                   ),
 
@@ -135,39 +138,7 @@ class ResultPage extends StatelessWidget {
                     await showDialog(
                         context: context,
                         builder: (BuildContext context) {
-                          return AlertDialog(
-                            title: Padding(
-                              padding: EdgeInsets.only(top: (25.0)),
-                              child: Center(
-                                child: Text(
-                                  '링크가 복사되었습니다!',
-                                  textAlign: TextAlign.center,
-                                  style: TextStyle(
-                                      color: Colors.black,
-                                      fontFamily: 'SnowCrab',
-                                      fontSize: 15,
-                                      fontWeight: FontWeight.w500
-                                  ),
-                                ),
-                              ),
-                            ),
-                            actions: [
-                              Container(
-                                width: 60,
-                                height: 30,
-                                child: TextButton(
-                                    style: TextButton.styleFrom(
-                                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
-                                      backgroundColor: Colors.black,
-                                    ),
-                                    onPressed: () {
-                                      Navigator.of(context).pop();
-                                    },
-                                    child: Text('확인', style: TextStyle(fontFamily: 'SnowCrab',fontWeight: FontWeight.w500, fontSize: (12),color: Colors.white),)
-                                ),
-                              )
-                            ],
-                          );
+                          return const Popup(title: "링크가 복사되었습니다!");
                         }
                     );
                     // copied successfully
