@@ -1,3 +1,9 @@
+<<<<<<< HEAD
 2023/10/25-15:56:11.747 f303 Reusing MANIFEST /private/var/folders/zx/0jtxdby93md85121dmw2wjdc0000gn/T/flutter_tools.x56x3L/flutter_tools_chrome_device.kh7aXK/Default/shared_proto_db/metadata/MANIFEST-000001
 2023/10/25-15:56:11.748 f303 Recovering log #3
 2023/10/25-15:56:11.748 f303 Reusing old log /private/var/folders/zx/0jtxdby93md85121dmw2wjdc0000gn/T/flutter_tools.x56x3L/flutter_tools_chrome_device.kh7aXK/Default/shared_proto_db/metadata/000003.log 
+=======
+2023/10/24-23:47:58.140 b103 Reusing MANIFEST /private/var/folders/52/h7znrd5s7lx6xcxzd03b03kh0000gn/T/flutter_tools.JHBExY/flutter_tools_chrome_device.qfDdZy/Default/shared_proto_db/metadata/MANIFEST-000001
+2023/10/24-23:47:58.140 b103 Recovering log #3
+2023/10/24-23:47:58.140 b103 Reusing old log /private/var/folders/52/h7znrd5s7lx6xcxzd03b03kh0000gn/T/flutter_tools.JHBExY/flutter_tools_chrome_device.qfDdZy/Default/shared_proto_db/metadata/000003.log 
+>>>>>>> mental
