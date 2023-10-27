@@ -7,10 +7,12 @@ class TestMain extends StatelessWidget {
   const TestMain( {
     Key? key,
     required this.title,
+    required this.imgN,
     required this.press,
   }) : super(key: key);
 
   final String title;
+  final String imgN;
   final GestureTapCallback press;
 
   @override
@@ -19,12 +21,19 @@ class TestMain extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
-        Container(
+        /*Container(
           width: 200.w,
           height: 200.w,
           color: Colors.grey,
+        ),*/
+        Image.asset(
+          'assets/images/$imgN/5.png',
+          fit: BoxFit.fitHeight,
+          height: 300,
+          width: 300,
+
         ),
-        SizedBox(height: (5.w)),
+        SizedBox(height: (10.w)),
         Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
@@ -40,7 +49,7 @@ class TestMain extends StatelessWidget {
                 ),
                 maxLines: 2,
               ),
-              Container(height: 12.h),
+              Container(height: 25),
               TextButton(
                   onPressed: press,
                   child: Text(
@@ -53,6 +62,7 @@ class TestMain extends StatelessWidget {
                     shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20.w)),
                     backgroundColor: Colors.black,
                   )),
+              Container(height: 50),
             ],
           ),
         ),

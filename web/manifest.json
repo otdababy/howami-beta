@@ -1,11 +1,11 @@
 {
-    "name": "howami",
-    "short_name": "howami",
+    "name": "Porong",
+    "short_name": "Porong",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
     "theme_color": "#0175C2",
-    "description": "A new Flutter project.",
+    "description": "Porong",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [

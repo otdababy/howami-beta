@@ -21,12 +21,12 @@ class StartButton extends StatelessWidget {
         onPressed: null,
         child: Text(
             title,
-            style: TextStyle(fontSize: 12.w, fontWeight: FontWeight.w700, fontFamily: 'SnowCrab',
+            style: TextStyle(fontSize: 12, fontWeight: FontWeight.w700, fontFamily: 'SnowCrab',
                 color: Colors.white )
         ),
         style: TextButton.styleFrom(
-          fixedSize: Size(130.w,32.w),
-          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20.w)),
+          fixedSize: Size(130,42),
+          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
           backgroundColor: Colors.black,
         ),
 
