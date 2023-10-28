@@ -1,11 +1,5 @@
-<<<<<<< HEAD
-2023/10/27-16:25:29.737 b303 Reusing MANIFEST /private/var/folders/zx/0jtxdby93md85121dmw2wjdc0000gn/T/flutter_tools.fvHGaU/flutter_tools_chrome_device.rJbPJn/Default/shared_proto_db/MANIFEST-000001
-2023/10/27-16:25:29.737 b303 Recovering log #7
-2023/10/27-16:25:29.738 b303 Reusing old log /private/var/folders/zx/0jtxdby93md85121dmw2wjdc0000gn/T/flutter_tools.fvHGaU/flutter_tools_chrome_device.rJbPJn/Default/shared_proto_db/000007.log 
-2023/10/27-16:25:29.738 b303 Delete type=0 #3
-=======
-2023/10/27-18:33:18.566 9103 Reusing MANIFEST /private/var/folders/52/h7znrd5s7lx6xcxzd03b03kh0000gn/T/flutter_tools.f4CTHV/flutter_tools_chrome_device.5CUmqY/Default/shared_proto_db/MANIFEST-000001
-2023/10/27-18:33:18.566 9103 Recovering log #4
-2023/10/27-18:33:18.567 9103 Reusing old log /private/var/folders/52/h7znrd5s7lx6xcxzd03b03kh0000gn/T/flutter_tools.f4CTHV/flutter_tools_chrome_device.5CUmqY/Default/shared_proto_db/000004.log 
-2023/10/27-18:33:18.567 9103 Delete type=0 #3
->>>>>>> mental
+2023/10/28-15:47:49.202 b003 Reusing MANIFEST /private/var/folders/52/h7znrd5s7lx6xcxzd03b03kh0000gn/T/flutter_tools.qFDLlF/flutter_tools_chrome_device.KSSREC/Default/shared_proto_db/MANIFEST-000001
+2023/10/28-15:47:49.202 b003 Recovering log #7
+2023/10/28-15:47:49.202 b003 Reusing old log /private/var/folders/52/h7znrd5s7lx6xcxzd03b03kh0000gn/T/flutter_tools.qFDLlF/flutter_tools_chrome_device.KSSREC/Default/shared_proto_db/000007.log 
+2023/10/28-15:47:49.202 b003 Delete type=0 #4
+2023/10/28-15:47:49.202 b003 Delete type=0 #3

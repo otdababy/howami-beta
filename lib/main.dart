@@ -50,7 +50,7 @@ class MyApp extends StatelessWidget {
             routes: {
               '/mbti_main': (context) => MbtiMainPage(),
               '/mbti_main': (context) => MbtiPage(),
-              '/aura' : (context) => ScenarioPage('아우라 명도','mental', const ['더 좋아하는 시간은?','당신에게 더 중요한 것은?','오늘 밤 꿈을 꾼다면?','자유시간이 주어진다면?','문제를 해결할 때\n당신이 먼저 하는 것은?','수고한 나에게\n주는 선물은?','슬픈일을 겪었을때 나는','더 나은 상황은?','당신이 선택할 길은?','당신이 생각하는 당신의 모습은?'],
+              '/aura' : (context) => ScenarioPage('아우라 명도','aura', const ['더 좋아하는 시간은?','당신에게 더 중요한 것은?','오늘 밤 꿈을 꾼다면?','자유시간이 주어진다면?','문제를 해결할 때\n당신이 먼저 하는 것은?','수고한 나에게\n주는 선물은?','슬픈일을 겪었을때 나는','더 나은 상황은?','당신이 선택할 길은?','당신이 생각하는 당신의 모습은?'],
                   const [2,1,1,1,1,2,1,1,1,1,2] , const ['생각을 정리할 수 있는 새벽','생기 넘치는 낮','나를 믿는 것','나를 사랑하는 것','환상 동화 속 주인공이 되는 꿈','사랑하는 사람과 함께하는 꿈','음악 들으며 홀로 한강 산책','한강에서 친구들과 맥주 한 잔','눈을 감고 상황을 그려본다','눈을 뜨고 주변을 둘러본다','수수한 꽃다발','조금 비싸서 망설이던 옷','슬픈 영화나 책을 보고 운다','차분히 마음을 가라앉히고 일기를 쓴다','오늘은 행복하지만 내일을 예측할 수 없을 때','오늘은 우울하지만 내일의 행복이 보장되어 있을 때','많은 발자국이 남아있는 길','아무도 밟지 않아 깨끗한 길','항상 새로운 일에 도전하는 사람','항상 완벽함을 추구하는 사람'],
                   const ['딜라잇 옐로우','아날로그 베이지','아로마 민트','오션 네이비','비비드 바이올렛'],
                   [['분위기를 스무스하게 만들어요','남들의 시선을 잡아끌어요','어두운 곳에서도 빛나는 생각을 해요'],
@@ -158,7 +158,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       TestMain(title: '회복탄력성 테스트' , imgN: 'mental', press: (){Navigator.pushNamed(context, '/mental');}),
                       TestMain(title: '내 이상형은 - 연애 밸런스게임' , imgN: 'lover', press: (){Navigator.pushNamed(context, '/lover');}),
                       TestMain(title: '무한상사 짤로 알아보는 \n 사회생활 유형 테스트' , imgN: 'social', press: (){Navigator.pushNamed(context, '/social');}),
-                      TestMain(title: '아우라 컬러 테스트' , imgN: 'mental', press: (){Navigator.pushNamed(context, '/aura');}),
+                      TestMain(title: '아우라 컬러 테스트' , imgN: 'aura', press: (){Navigator.pushNamed(context, '/aura');}),
 
                       // Container(height: 70.h),
 

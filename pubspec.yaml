@@ -83,6 +83,11 @@ flutter:
     - assets/images/social/3.png
     - assets/images/social/4.png
     - assets/images/social/5.png
+    - assets/images/aura/1.png
+    - assets/images/aura/2.png
+    - assets/images/aura/3.png
+    - assets/images/aura/4.png
+    - assets/images/aura/5.png
     - assets/images/wordmark.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
