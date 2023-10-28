@@ -29,8 +29,8 @@ class TestMain extends StatelessWidget {
         Image.asset(
           'assets/images/$imgN/5.png',
           fit: BoxFit.fitHeight,
-          height: 300,
-          width: 300,
+          height: 200,
+          width: 200,
 
         ),
         SizedBox(height: (10.w)),
@@ -45,21 +45,21 @@ class TestMain extends StatelessWidget {
                     fontFamily: 'SnowCrab',
                     color: Colors.black,
                     fontWeight: FontWeight.w300,
-                    fontSize:14.w
+                    fontSize:12.w
                 ),
                 maxLines: 2,
               ),
-              Container(height: 25),
+              Container(height: 15),
               TextButton(
                   onPressed: press,
                   child: Text(
                       '시작하기',
-                      style: TextStyle(fontFamily: 'SnowCrab',fontSize: 12.w, fontWeight: FontWeight.w300,
+                      style: TextStyle(fontFamily: 'SnowCrab',fontSize: 12, fontWeight: FontWeight.w300,
                           color: Colors.white )
                   ),
                   style: TextButton.styleFrom(
-                    fixedSize: Size(130.w,32.w),
-                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20.w)),
+                    fixedSize: Size(100,32),
+                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10.w)),
                     backgroundColor: Colors.black,
                   )),
               Container(height: 50),

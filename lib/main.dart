@@ -153,11 +153,23 @@ class _MyHomePageState extends State<MyHomePage> {
                   Container(),
                   Column(
                     children: [
-                      // Container(height: 120.h,),
-                      TestMain(title: 'MBTI T력 테스트' , imgN: 't_strength', press: (){Navigator.pushNamed(context, '/scenario');}),
-                      TestMain(title: '회복탄력성 테스트' , imgN: 'mental', press: (){Navigator.pushNamed(context, '/mental');}),
-                      TestMain(title: '내 이상형은 - 연애 밸런스게임' , imgN: 'lover', press: (){Navigator.pushNamed(context, '/lover');}),
-                      TestMain(title: '무한상사 짤로 알아보는 \n 사회생활 유형 테스트' , imgN: 'social', press: (){Navigator.pushNamed(context, '/social');}),
+                      Container(height: 40),
+                      Row(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          TestMain(title: 'MBTI T력 테스트' , imgN: 't_strength', press: (){Navigator.pushNamed(context, '/scenario');}),
+                          TestMain(title: '회복탄력성 테스트' , imgN: 'mental', press: (){Navigator.pushNamed(context, '/mental');}),
+                        ],
+                      ),
+                      Row(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          TestMain(title: '내 이상형은 - 연애 밸런스게임' , imgN: 'lover', press: (){Navigator.pushNamed(context, '/lover');}),
+                          TestMain(title: '무한상사 짤로 알아보는 \n 사회생활 유형 테스트' , imgN: 'social', press: (){Navigator.pushNamed(context, '/social');}),
+                        ],
+                      ),
                       TestMain(title: '아우라 컬러 테스트' , imgN: 'aura', press: (){Navigator.pushNamed(context, '/aura');}),
 
                       // Container(height: 70.h),
